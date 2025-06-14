@@ -73,7 +73,7 @@ export const optionsData = {
         "Overcast natural light", "Soft bounce light", "Spotlight focus", "Harsh top light", "Side lighting", "Color splash lighting", "Twilight lighting",
         "Interior lamp glow", "Candlelit glow", "Underlight (horror)", "Bioluminescent glow", "Northern lights", "Disco lights", "UV blacklight",
         "Magic aura glow", "Stormy flash light", "City night reflections", "Dim fluorescent", "Fairy light sparkle", "Natural daylight filter",
-        "Strobe lighting", "Dream haze lighting"
+        "Strobe lighting", "Dream haze lighting", "Key-Light"
     ],
 
     background: [
@@ -81,7 +81,8 @@ export const optionsData = {
         "Plain white background", "Cherry blossom trees", "Cyberpunk city", "Magical forest", "Futuristic skyline", "Ancient ruins", "Sunset beach",
         "Urban rooftop", "Enchanted garden", "Beachside house", "Downtown streets", "Classroom", "Medieval town", "Castle ballroom", "Boat",
         "Parking lot", "Shop", "Boutique", "Graveyard", "Snowy mountain", "Train station", "Library interior", "Abandoned warehouse", "Moon surface",
-        "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room", "Newsroom", "News Studio"
+        "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room", "Newsroom", "News Studio", "Onseen", "Club",
+        "Factory", "SSIA HQ", "Car Interior", "Suburban Area Park", "Flower Park"
     ],
 
     clothing: [
@@ -89,7 +90,7 @@ export const optionsData = {
         "Casual t-shirt", "Elegant dress", "Business suit", "Hoodie", "Kimono", "Leather jacket", "School uniform", "Cyberpunk outfit", "Streetwear",
         "Tactical uniform", "Fantasy armor", "Sportswear", "Military uniform", "Ballgown", "Cloak and tunic", "Gothic lolita dress", "Trench coat",
         "Tank top and jeans", "Overalls", "Traditional hanbok", "Lab coat", "Bikini/swimsuit", "Battle robe", "Wedding dress", "Sailor uniform",
-        "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat"
+        "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "SWAT Uniform", "Special Agent Suit"
     ],
 
     clothingColor: [
@@ -104,7 +105,7 @@ export const optionsData = {
         "Glasses", "Sunglasses", "Eye patch", "Face mask", "Reading glasses", "Round glasses", "Cyberpunk visor", "Monocle", "Bandage across nose",
         "Transparent mask", "VR goggles", "High-tech scouter", "Face tattoo", "Decorative gems", "Tribal face paint", "Makeup tear streak",
         "Steampunk goggles", "Breathing apparatus", "AR glasses", "Crystal eyepiece", "Glowing contact lens", "Golden mask", "Half-face mask",
-        "Futuristic faceplate", "Face barcode", "Ear-to-ear headset", "Dragon mark", "Forehead gem", "Visor with UI"
+        "Futuristic faceplate", "Face barcode", "Ear-to-ear headset", "Dragon mark", "Forehead gem", "Visor with UI", "Retina Contact Lens"
     ],
 
     pose: [
@@ -112,7 +113,7 @@ export const optionsData = {
         "Standing confidently", "Sitting casually", "Walking forward", "Arms crossed", "Hand on hip", "Fighting stance", "Dancing", "Looking over shoulder",
         "With gun", "Kneeling", "Leaning on wall", "Running", "Jumping", "Lying down", "Peace sign", "Holding object", "Hands in pockets",
         "Casting spell", "Floating", "Back turned", "Kicking", "Stretching", "Singing", "Holding hands out", "Protective stance", "Hugging something",
-        "Martial arts stance", "Crouching", "Pointing"
+        "Martial arts stance", "Crouching", "Pointing", "Driving", "Sleeping"
     ],
 
     hairAccessory: [
@@ -137,7 +138,7 @@ export const optionsData = {
         "Soft blur", "Particle effects", "Depth of field", "Film grain", "Glitch effects", "Ethereal glow", "Smoke trails", "Magic aura", "Rain droplets",
         "Fire sparks", "Ice shards", "Electric sparks", "Floating leaves", "Cherry blossom petals", "Snowfall", "Motion blur", "Blood splatter",
         "Lens flare", "Dust particles", "Time distortion", "Wind swirl", "Fireflies", "Shadow tendrils", "Hologram distortion", "Shattered glass effect",
-        "Aura rings", "Light beams", "Energy ripple", "Neon outline"
+        "Aura rings", "Light beams", "Energy ripple", "Neon outline", "Vignette", "Monochrome"
     ]
 };
 
