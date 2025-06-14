@@ -3,6 +3,7 @@ import { initializeVisibilityControls } from './visibility.js';
 import { initializePromptGenerator } from './prompt-generator.js';
 import { initializeClipboard } from './clipboard.js';
 import { loadOptions } from './options.js';
+import { autorefresh } from  ',/auto-refresh.js';
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
@@ -10,4 +11,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeVisibilityControls();
     initializePromptGenerator();
     initializeClipboard();
+    autorefresh();
 });
