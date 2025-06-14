@@ -18,6 +18,17 @@ function generatePrompt() {
             const formData = getFormData();
             const prompt = buildPrompt(formData);
             const negativePrompt = formData.negativePrompt;
+
+            // NSFW content filter
+            if (containsNSFW(prompt)) {
+                if (window.showToast) {
+                    window.showToast('Warning: Your prompt contains NSFW content. Certain AI Image Generators like BingAI Image may not work.', 'warning');
+                }
+                // Optionally, you can still display the prompt or block it entirely.
+                displayPrompt(prompt, negativePrompt);
+                updateCharacterCount(prompt);
+                return;
+            }
             
             displayPrompt(prompt, negativePrompt);
             updateCharacterCount(prompt);
@@ -275,4 +286,14 @@ function updateCharacterCount(text) {
             charCount.style.color = 'var(--text-muted)';
         }
     }
+}
+
+// NSFW content filter function
+function containsNSFW(text) {
+    if (!text) return false;
+    const nsfwKeywords = [
+        'nude', 'nudity', 'naked', 'sex', 'sexual', 'erotic', 'nsfw', 'genital', 'breast', 'boobs', 'penis', 'vagina', 'cum', 'orgasm', 'masturbat', 'porn', 'lewd', 'explicit', 'fetish', 'bare chest', 'bare breasts', 'bare skin', 'crotch', 'groin', 'areola', 'nipples', 'anal', 'intercourse', 'sperm', 'ejaculat', 'dildo', 'bdsm', 'bondage', 'blowjob', 'handjob', 'hentai', 'pussy', 'cock', 'asshole', 'butthole', 'stripper', 'strip club'
+    ];
+    const lower = text.toLowerCase();
+    return nsfwKeywords.some(word => lower.includes(word));
 }
