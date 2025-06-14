@@ -60,7 +60,7 @@ const optionsData = {
         "",
         "Happy", "Melancholic", "Mysterious", "Confident", "Dreamy", "Fierce", "Serene", "Playful", "Determined", "Flirty", "Sad", "Seductive",
         "Angry", "Calm", "Bashful", "Joyful", "Stoic", "Grumpy", "Smug", "Cold-hearted", "Energetic", "Lonely", "Fearful", "Hopeful", "Proud",
-        "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy", "Goofy", "Yandere", "Remorseful", "Crying", "Sad"
+        "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy", "Goofy", "Yandere", "Remorseful", "Crying", "Satisfied"
     ],
 
     cameraAngle: [
