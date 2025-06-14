@@ -374,14 +374,18 @@
                 </div>
             </div>
         </div>
-    </main>    <script src="js/bundle.js"></script>
-    
-    <!-- Notification Toast -->
-    <div id="toast-notification" class="toast">
-        <i class="fas fa-check-circle"></i>
-        <span id="toast-message">Action completed!</span>
-    </div>
+    </main>
+    <!-- Load scripts in correct order -->
+    <script src="js/options.js" type="module"></script>
+    <script src="js/visibility.js" type="module"></script>
+    <script src="js/templates.js" type="module"></script>
+    <script src="js/history.js" type="module"></script>
+    <script src="js/favorites.js" type="module"></script>
+    <script src="js/prompt-generator.js" type="module"></script>
+    <script src="js/advanced.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
 
+    <!-- Service Worker and other scripts -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
