@@ -23,5 +23,5 @@ TSBC-AI-Art-Prompt-Gen is a web-based tool designed to generate creative art pro
 ## Contributors
 We appreciate the amazing contributions from our community!
 - [@tenstudiosbc](https://github.com/tenstudiosbc) – Project Owner & Maintainer
-- [@Contributor1](https://github.com/Azixe) – Feature Development
-- [@Contributor2](https://github.com/Vynn0) – Bug Fixes & Optimization
+- [@Azixe](https://github.com/Azixe) – Feature Development
+- [@Vynn0](https://github.com/Vynn0) – Bug Fixes & Optimization
