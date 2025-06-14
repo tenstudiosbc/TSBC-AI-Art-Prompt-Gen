@@ -185,8 +185,6 @@
                 <option value="Fantasy race (elf, android, etc.)">Fantasy race</option>
             </select>
 
-            <label for="body-type">Body Type;</label>
-
             <label for="hair-style">Hair Style:</label>
             <select id="hair-style">
                 <option value="Long wavy hair">Long wavy hair</option>
@@ -263,6 +261,30 @@
     <option value="Heterochromia">Heterochromia</option>
     <option value="Glowing Neon">Glowing Neon</option>
 </select>
+
+                <label for="body-type">Body Type:</label>
+<select id="body-type">
+    <option value="Slim">Slim</option>
+    <option value="Athletic">Athletic</option>
+    <option value="Muscular">Muscular</option>
+    <option value="Petite">Petite</option>
+    <option value="Curvy">Curvy</option>
+    <option value="Plus-size">Plus-size</option>
+    <option value="Average">Average</option>
+    <option value="Stocky">Stocky</option>
+    <option value="Lean">Lean</option>
+    <option value="Tall">Tall</option>
+    <option value="Short">Short</option>
+    <option value="Chubby">Chubby</option>
+    <option value="Toned">Toned</option>
+    <option value="Broad-shouldered">Broad-shouldered</option>
+    <option value="Hourglass">Hourglass</option>
+    <option value="Rectangular">Rectangular</option>
+    <option value="Pear-shaped">Pear-shaped</option>
+    <option value="Apple-shaped">Apple-shaped</option>
+    <option value="Thin">Thin</option>
+    <option value="Voluptuous">Voluptuous</option>
+        </select>
 
             <div class="hair-accessory-container" id="hair-accessory-container">
                 <label for="hair-accessory">Hair Accessory:</label>
@@ -537,6 +559,7 @@
             const hairStyle = document.getElementById("hair-style").value;
             const hairColor = document.getElementById("hair-color").value;
             const eyeColor = document.getElementById("eye-color").value;
+            const bodyType = document.getElementById("body-type").value;
             const background = document.getElementById("background").value;
             const clothing = document.getElementById("clothing").value;
             const clothingColor = document.getElementById("clothing-color").value;
@@ -563,7 +586,7 @@
                 }
             }
 
-            let generatedPrompt = `${artStyle} art style, ${age} ${gender}, ${hairColor} ${hairStyle}, ${eyeColor} eyes`;
+            let generatedPrompt = `${artStyle} art style, ${age} ${gender}, ${bodyType} body, ${hairColor} ${hairStyle}, ${eyeColor} eyes`;
             
             if (hairAccessory) {
                 generatedPrompt += ` with ${hairAccessory}`;
