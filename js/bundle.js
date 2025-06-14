@@ -32,7 +32,7 @@ const optionsData = {
         "Long wavy hair", "Short spiky hair", "Medium-length layered hair", "Braided hair", "Pixie cut", "Tied ponytail", "Twin tails", "Messy bun",
         "Bob cut", "Undercut", "Loose Ponytail", "Short Hair", "Side-swept bangs", "Afro", "Mohawk", "Straight long hair", "Shaggy hair", "Half-up bun",
         "Curly bob", "Asymmetrical cut", "Side braid", "Fishtail braid", "Dreadlocks", "Space buns", "Wind-swept hair", "Wolf cut", "Fluffy perm",
-        "Pompadour", "Elegant updo"
+        "Pompadour", "Elegant updo", "Elegant Ponytail"
     ],
 
     hairColor: [
@@ -60,7 +60,7 @@ const optionsData = {
         "",
         "Happy", "Melancholic", "Mysterious", "Confident", "Dreamy", "Fierce", "Serene", "Playful", "Determined", "Flirty", "Sad", "Seductive",
         "Angry", "Calm", "Bashful", "Joyful", "Stoic", "Grumpy", "Smug", "Cold-hearted", "Energetic", "Lonely", "Fearful", "Hopeful", "Proud",
-        "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy"
+        "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy", "Goofy", "Yandere", "Remorseful", "Crying", "Sad"
     ],
 
     cameraAngle: [
@@ -85,7 +85,8 @@ const optionsData = {
         "Plain white background", "Cherry blossom trees", "Cyberpunk city", "Magical forest", "Futuristic skyline", "Ancient ruins", "Sunset beach",
         "Urban rooftop", "Enchanted garden", "Beachside house", "Downtown streets", "Classroom", "Medieval town", "Castle ballroom", "Boat",
         "Parking lot", "Shop", "Boutique", "Graveyard", "Snowy mountain", "Train station", "Library interior", "Abandoned warehouse", "Moon surface",
-        "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room", "Newsroom", "News Studio"
+        "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room", "Newsroom", "News Studio", "SSIA HQ",
+        "Interrogation Room", "Apartment Living room", "bedroom", "kitchen", "Ruins", "Green Background"
     ],
 
     clothing: [
