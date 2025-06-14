@@ -135,12 +135,19 @@ function applyTemplate(template) {
         const field = document.getElementById(fieldId);
         if (field && value) {
             field.value = value;
-            
             // Trigger change event to update visibility controls
             field.dispatchEvent(new Event('change', { bubbles: true }));
         }
     });
-    
+
+    // Clear advanced custom fields when applying a template
+    const customPose = document.getElementById('custom-pose');
+    const customBackground = document.getElementById('custom-background');
+    const customPersonality = document.getElementById('custom-personality');
+    if (customPose) customPose.value = '';
+    if (customBackground) customBackground.value = '';
+    if (customPersonality) customPersonality.value = '';
+
     // Show success message
     if (window.showToast) {
         window.showToast(`Applied template: ${template.name}`, 'success');

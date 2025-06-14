@@ -119,7 +119,7 @@ window.loadHistoryItem = function(id) {
         // Load settings into form
         Object.entries(item.settings).forEach(([fieldId, value]) => {
             const field = document.getElementById(fieldId);
-            if (field && value) {
+            if (field && value !== undefined) {
                 field.value = value;
                 field.dispatchEvent(new Event('change', { bubbles: true }));
             }

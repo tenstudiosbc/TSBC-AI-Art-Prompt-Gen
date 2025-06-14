@@ -66,18 +66,22 @@ function getFormData() {
         lighting: document.getElementById("lighting").value,
         effects: document.getElementById("effects").value,
         pose: document.getElementById("pose").value,
-        
+
         // Conditional fields
         hairAccessory: document.getElementById("hair-accessory")?.value || "",
         gunPose: document.getElementById("gun-pose")?.value || "",
-        
+
         // Advanced fields
         customPrefix: document.getElementById("custom-prefix")?.value || "",
         customSuffix: document.getElementById("custom-suffix")?.value || "",
         qualityTags: document.getElementById("quality-tags")?.value || "",
         negativePrompt: document.getElementById("negative-prompt")?.value || "",
         aspectRatio: document.getElementById("aspect-ratio")?.value || "",
-        modelStyle: document.getElementById("model-style")?.value || ""
+        modelStyle: document.getElementById("model-style")?.value || "",
+        // New advanced options
+        customPose: document.getElementById("custom-pose")?.value || "",
+        customBackground: document.getElementById("custom-background")?.value || "",
+        customPersonality: document.getElementById("custom-personality")?.value || ""
     };
 }
 
@@ -143,12 +147,16 @@ function buildPrompt(data) {
     }
     
     // Mood and expression
-    if (data.mood) {
+    if (data.customPersonality) {
+        promptParts.push(`personality: ${data.customPersonality}`);
+    } else if (data.mood) {
         promptParts.push(`expressing ${data.mood}`);
     }
     
-    // Pose (gun pose takes priority if available)
-    if (data.gunPose && data.pose === "With gun") {
+    // Pose (custom pose takes priority, then gun pose, then pose)
+    if (data.customPose) {
+        promptParts.push(data.customPose);
+    } else if (data.gunPose && data.pose === "With gun") {
         promptParts.push(data.gunPose);
     } else if (data.pose) {
         promptParts.push(data.pose);
@@ -160,7 +168,12 @@ function buildPrompt(data) {
     if (data.cameraAngle) technicalSpecs.push(`captured in ${data.cameraAngle}`);
     if (data.lighting) technicalSpecs.push(`illuminated with ${data.lighting}`);
     if (data.effects) technicalSpecs.push(`featuring ${data.effects} effects`);
-    if (data.background) technicalSpecs.push(`with ${data.background}`);
+    // Custom background takes priority
+    if (data.customBackground) {
+        technicalSpecs.push(`with background: ${data.customBackground}`);
+    } else if (data.background) {
+        technicalSpecs.push(`with ${data.background}`);
+    }
     
     if (technicalSpecs.length > 0) {
         promptParts.push(technicalSpecs.join(', '));
