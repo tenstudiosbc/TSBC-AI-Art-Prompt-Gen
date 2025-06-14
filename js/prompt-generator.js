@@ -152,29 +152,27 @@ function buildPrompt(data) {
     } else if (data.mood) {
         promptParts.push(`expressing ${data.mood}`);
     }
-    
+
     // Pose (custom pose takes priority, then gun pose, then pose)
-    if (data.customPose) {
+    if (data.customPose && data.customPose.trim()) {
         promptParts.push(data.customPose);
     } else if (data.gunPose && data.pose === "With gun") {
         promptParts.push(data.gunPose);
     } else if (data.pose) {
         promptParts.push(data.pose);
     }
-    
+
     // Technical specifications
     let technicalSpecs = [];
-    
     if (data.cameraAngle) technicalSpecs.push(`captured in ${data.cameraAngle}`);
     if (data.lighting) technicalSpecs.push(`illuminated with ${data.lighting}`);
     if (data.effects) technicalSpecs.push(`featuring ${data.effects} effects`);
     // Custom background takes priority
-    if (data.customBackground) {
+    if (data.customBackground && data.customBackground.trim()) {
         technicalSpecs.push(`with background: ${data.customBackground}`);
     } else if (data.background) {
         technicalSpecs.push(`with ${data.background}`);
     }
-    
     if (technicalSpecs.length > 0) {
         promptParts.push(technicalSpecs.join(', '));
     }
