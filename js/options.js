@@ -1,6 +1,7 @@
 // Options data - reduced for better performance
 export const optionsData = {
     artStyle: [
+        "",
         "Painterly anime",
         "Semi-realistic anime",
         "Cyberpunk anime style",
@@ -11,6 +12,7 @@ export const optionsData = {
     ],
     
     age: [
+        "",
         "Child",
         "Teen", 
         "Young adult",
@@ -20,6 +22,7 @@ export const optionsData = {
     ],
     
     gender: [
+        "",
         "Woman",
         "Man",
         "Androgynous",
@@ -29,6 +32,7 @@ export const optionsData = {
     ],
     
     hairStyle: [
+        "",
         "Long wavy hair",
         "Short spiky hair",
         "Medium-length layered hair",
@@ -42,6 +46,7 @@ export const optionsData = {
     ],
     
     hairColor: [
+        "",
         "Black",
         "Brown", 
         "Blonde",
@@ -55,6 +60,7 @@ export const optionsData = {
     ],
     
     eyeColor: [
+        "",
         "Black",
         "Dark Brown",
         "Light Brown",
@@ -68,6 +74,7 @@ export const optionsData = {
     ],
     
     bodyType: [
+        "",
         "Slim",
         "Athletic",
         "Muscular",
@@ -80,6 +87,7 @@ export const optionsData = {
     ],
     
     mood: [
+        "",
         "Happy",
         "Melancholic",
         "Mysterious",
@@ -92,6 +100,7 @@ export const optionsData = {
     ],
     
     cameraAngle: [
+        "",
         "Portrait shot",
         "Close-up",
         "Medium shot", 
@@ -103,6 +112,7 @@ export const optionsData = {
     ],
     
     lighting: [
+        "",
         "Rim lighting",
         "Golden hour light",
         "Soft studio glow",
@@ -112,6 +122,7 @@ export const optionsData = {
     ],
     
     background: [
+        "",
         "Plain white background",
         "Cherry blossom trees",
         "Cyberpunk city",
@@ -124,6 +135,7 @@ export const optionsData = {
     ],
     
     clothing: [
+        "",
         "Casual t-shirt",
         "Elegant dress",
         "Business suit",
@@ -136,6 +148,7 @@ export const optionsData = {
     ],
     
     clothingColor: [
+        "",
         "Black",
         "White",
         "Red",
@@ -160,6 +173,7 @@ export const optionsData = {
     ],
     
     pose: [
+        "",
         "Standing confidently",
         "Sitting casually",
         "Walking forward",
@@ -191,6 +205,7 @@ export const optionsData = {
     ],
     
     effects: [
+        "",
         "Soft blur",
         "Particle effects",
         "Depth of field",
