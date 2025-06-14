@@ -89,10 +89,11 @@ function getFormData() {
         negativePrompt: document.getElementById("negative-prompt")?.value || "",
         aspectRatio: document.getElementById("aspect-ratio")?.value || "",
         modelStyle: document.getElementById("model-style")?.value || "",
-        // New advanced options
         customPose: document.getElementById("custom-pose")?.value || "",
         customBackground: document.getElementById("custom-background")?.value || "",
-        customPersonality: document.getElementById("custom-personality")?.value || ""
+        customPersonality: document.getElementById("custom-personality")?.value || "",
+        // Aggressiveness
+        aggressiveness: document.getElementById("aggressiveness")?.value || "3"
     };
 }
 
@@ -203,6 +204,16 @@ function buildPrompt(data) {
         promptParts.push(data.modelStyle);
     }
     
+    // Aggressiveness tweak
+    const aggr = parseInt(data.aggressiveness || "3", 10);
+    if (aggr > 1) {
+        // Add more "aggressive" tags based on level
+        if (aggr >= 2) promptParts.unshift("masterpiece");
+        if (aggr >= 3) promptParts.unshift("best quality");
+        if (aggr >= 4) promptParts.unshift("ultra detailed");
+        if (aggr >= 5) promptParts.unshift("award winning, trending on artstation");
+    }
+
     return promptParts.join(', ');
 }
 

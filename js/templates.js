@@ -69,6 +69,72 @@ const templates = [
             "lighting": "Moonlit ambiance",
             "background": "Gothic architecture"
         }
+    },
+    // --- New Templates Below ---
+    {
+        name: "Sci-Fi Mecha Pilot",
+        description: "Futuristic pilot in a sci-fi mecha suit",
+        settings: {
+            "art-style": "3D",
+            "clothing": "Futuristic pilot suit",
+            "background": "Futuristic skyline",
+            "lighting": "Neon cyberpunk glow",
+            "pose": "Standing confidently",
+            "mood": "Determined",
+            "effects": "Hologram distortion"
+        }
+    },
+    {
+        name: "Magical Girl Transformation",
+        description: "Sparkling magical girl in transformation sequence",
+        settings: {
+            "art-style": "Classic shoujo anime",
+            "clothing": "Sailor uniform",
+            "background": "Cherry blossom trees",
+            "lighting": "Magic aura glow",
+            "effects": "Aura rings",
+            "mood": "Hopeful",
+            "pose": "Floating"
+        }
+    },
+    {
+        name: "Noir Detective",
+        description: "Moody noir detective scene",
+        settings: {
+            "art-style": "Noir comic style",
+            "clothing": "Trench coat",
+            "background": "Downtown streets",
+            "lighting": "Harsh top light",
+            "mood": "Stoic",
+            "pose": "Leaning on wall",
+            "effects": "Film grain"
+        }
+    },
+    {
+        name: "Steampunk Inventor",
+        description: "Inventor in a steampunk workshop",
+        settings: {
+            "art-style": "Steampunk fantasy",
+            "clothing": "Lab coat",
+            "face-accessories": "Steampunk goggles",
+            "background": "Factory",
+            "lighting": "Interior lamp glow",
+            "mood": "Energetic",
+            "pose": "Hands in pockets"
+        }
+    },
+    {
+        name: "Beach Day",
+        description: "Relaxed character enjoying a sunny beach day",
+        settings: {
+            "art-style": "Watercolor sketch",
+            "clothing": "Bikini/swimsuit",
+            "background": "Sunset beach",
+            "lighting": "Sunset backlight",
+            "mood": "Joyful",
+            "pose": "Sitting casually",
+            "effects": "Soft blur"
+        }
     }
 ];
 
