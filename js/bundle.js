@@ -244,8 +244,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('✨ Application initialized successfully!');
     
-    // Show welcome animation
-    showWelcomeAnimation();
+    // Show welcome toast with delay
+    setTimeout(() => {
+        showToast('Welcome to TSBC AI Art Prompt Maker v2.0!', 'info', 3000);
+    }, 1000);
 });
 
 // Load options into dropdowns
@@ -992,61 +994,33 @@ function showToast(message, type = 'success', duration = 3000) {
     
     if (!toast || !toastMessage) return;
     
-    // Clear existing timeout
-    if (toastTimeout) {
-        clearTimeout(toastTimeout);
-    }
-    
-    // Set message and type
-    toastMessage.textContent = message;
-    
-    // Remove existing type classes
-    toast.classList.remove('success', 'error', 'warning', 'info');
-    toast.classList.add(type);
-    
-    // Set appropriate icon
-    const icon = toast.querySelector('i');
-    if (icon) {
-        icon.className = getToastIcon(type);
-    }
-    
-    // Show toast
-    toast.classList.add('show');
-    
-    // Auto hide after duration
-    toastTimeout = setTimeout(() => {
-        hideToast();
-    }, duration);
-    
-    // Allow manual dismiss by clicking
-    toast.onclick = hideToast;
-}
-
-function hideToast() {
-    const toast = document.getElementById('toast-notification');
-    if (toast) {
+    // Clear any existing timeouts
+    if (window.toastTimeout) {
+        clearTimeout(window.toastTimeout);
         toast.classList.remove('show');
     }
     
-    if (toastTimeout) {
-        clearTimeout(toastTimeout);
-        toastTimeout = null;
-    }
-}
-
-function getToastIcon(type) {
-    switch (type) {
-        case 'success':
-            return 'fas fa-check-circle';
-        case 'error':
-            return 'fas fa-exclamation-circle';
-        case 'warning':
-            return 'fas fa-exclamation-triangle';
-        case 'info':
-            return 'fas fa-info-circle';
-        default:
-            return 'fas fa-check-circle';
-    }
+    // Update toast content
+    toast.className = `toast ${type}`;
+    toastMessage.textContent = message;
+    
+    // Show toast
+    requestAnimationFrame(() => {
+        toast.classList.add('show');
+    });
+    
+    // Auto hide after duration
+    window.toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+    }, duration);
+    
+    // Allow manual dismiss
+    toast.onclick = () => {
+        toast.classList.remove('show');
+        if (window.toastTimeout) {
+            clearTimeout(window.toastTimeout);
+        }
+    };
 }
 
 // Advanced functionality
@@ -1316,6 +1290,32 @@ style.textContent = `
     }
     
     .toast.success {
+        background: var(--success-color);
+    }
+    
+    .toast.error {
+        background: var(--danger-color);
+    }
+    
+    .toast.warning {
+        background: var(--warning-color);
+    }
+    
+    .toast.info {
+        background: var(--primary-color);
+    }
+    
+    .toast {
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .toast:hover {
+        transform: translateX(-5px);
+        box-shadow: var(--shadow-xl);
+    }
+`;
+document.head.appendChild(style);
         background: var(--success-color);
     }
     

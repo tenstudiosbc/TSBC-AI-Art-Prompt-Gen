@@ -66,14 +66,17 @@
     opacity: 0;
     transition: all 0.3s ease;
     z-index: 1000;
+    pointer-events: none; /* Allow clicking through */
+    max-width: 80vw;
 }
 
 .toast.show {
     transform: translateY(0);
     opacity: 1;
+    pointer-events: auto; /* Enable interaction only when visible */
 }
 
-.toast.success { background: var(--success-color); color: white; }
+.toast.success { background: var(--success-color); color: white; opacity: 0.9; }
 .toast.error { background: var(--danger-color); color: white; }
 .toast.warning { background: var(--warning-color); color: white; }
 .toast.info { background: var(--primary-color); color: white; }
