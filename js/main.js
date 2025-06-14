@@ -3,7 +3,6 @@ import { initializeVisibilityControls } from './visibility.js';
 import { initializePromptGenerator } from './prompt-generator.js';
 import { initializeClipboard } from './clipboard.js';
 import { loadOptions } from './options.js';
-import { autorefresh } from  ',/auto-refresh.js';
 
 // New imports for enhanced functionality
 import { initializeTabs } from './tabs.js';
