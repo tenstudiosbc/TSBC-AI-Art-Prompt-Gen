@@ -1,4 +1,4 @@
-export const optionsData = {
+const optionsData = {
     artStyle: [
         "",
         "Painterly anime", "Semi-realistic anime", "Cyberpunk anime style", "Studio Ghibli-inspired", "Cel-shaded", "3D", "Photorealistic",
@@ -7,14 +7,12 @@ export const optionsData = {
         "Classic shoujo anime", "Classic shounen anime", "Brush pen illustration", "Dark fantasy manga", "Visual novel style", "Retro 80s anime",
         "Fantasy RPG cover style", "Children’s book illustration"
     ],
-
     age: [
         "",
         "Infant", "Toddler", "Young child", "Child", "Tween", "Early teen", "Teen", "Late teen", "Young adult", "20s", "Late 20s", "Early 30s",
         "30s", "Late 30s", "Adult", "Mid 40s", "Middle-aged", "Early 50s", "Late 50s", "Senior", "Elderly", "Ancient-looking", "Immortal youthful",
         "Ageless appearance", "Preteen", "Old but agile", "Teen-looking android", "Mature warrior", "Youthful mage"
     ],
-
     gender: [
         "",
         "Woman", "Man", "Androgynous", "Non-binary", "Feminine-presenting", "Masculine-presenting", "Genderfluid", "Agender", "Demiboy", "Demigirl",
@@ -22,7 +20,6 @@ export const optionsData = {
         "Magical girl form", "Masquerading gender", "Dual-gendered", "Ambiguous gender", "Fae gender", "Cursed form", "Reincarnated gender",
         "Cybernetic androgyny", "Princess-knight fusion", "Witch form", "Goddess form"
     ],
-
     hairStyle: [
         "",
         "Long wavy hair", "Short spiky hair", "Medium-length layered hair", "Braided hair", "Pixie cut", "Tied ponytail", "Twin tails", "Messy bun",
@@ -30,35 +27,30 @@ export const optionsData = {
         "Curly bob", "Asymmetrical cut", "Side braid", "Fishtail braid", "Dreadlocks", "Space buns", "Wind-swept hair", "Wolf cut", "Fluffy perm",
         "Pompadour", "Elegant updo"
     ],
-
     hairColor: [
         "",
         "Black", "Brown", "Blonde", "Red", "Blue", "Green", "Pink", "Purple", "Silver", "White", "Lavender", "Auburn", "Orange", "Turquoise",
         "Rose gold", "Mint green", "Pastel pink", "Pastel purple", "Peach", "Grey", "Charcoal", "Multicolor", "Rainbow", "Neon green", "Ice blue",
         "Dark teal", "Platinum blonde", "Jet black", "Holographic"
     ],
-
     eyeColor: [
         "",
         "Black", "Dark Brown", "Light Brown", "Hazel", "Green", "Blue", "Violet", "Silver", "Grey", "Heterochromia", "Amber", "Turquoise", "Pink",
         "Red", "White", "Glowing Blue", "Glowing Red", "Golden", "Ice Blue", "Crimson", "Dark Green", "Soft Lavender", "Sunset Orange", "Neon Yellow",
         "Amethyst", "Sky Blue", "Milky white (blind)", "Cat eyes", "Reptilian slit"
     ],
-
     bodyType: [
         "",
         "Slim", "Athletic", "Muscular", "Petite", "Curvy", "Average", "Tall", "Short", "Toned", "Plus-size", "Chubby", "Lean", "Stocky", "Hourglass",
         "Pear-shaped", "Apple-shaped", "Broad-shouldered", "Lanky", "Thin", "Voluptuous", "Compact", "Delicate", "Robust", "Graceful", "Sturdy",
         "Slender", "Thickset", "Dancer’s build", "Fantasy warrior physique"
     ],
-
     mood: [
         "",
         "Happy", "Melancholic", "Mysterious", "Confident", "Dreamy", "Fierce", "Serene", "Playful", "Determined", "Flirty", "Sad", "Seductive",
         "Angry", "Calm", "Bashful", "Joyful", "Stoic", "Grumpy", "Smug", "Cold-hearted", "Energetic", "Lonely", "Fearful", "Hopeful", "Proud",
         "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy"
     ],
-
     cameraAngle: [
         "",
         "Portrait shot", "Close-up", "Medium shot", "Full body", "Low angle", "High angle", "Side profile", "Three-quarter view", "Over the shoulder",
@@ -66,7 +58,6 @@ export const optionsData = {
         "Wide angle", "Tilted profile", "Tracking shot angle", "Zoomed-in on eyes", "Tilt-up angle", "Tilt-down angle", "Centered angle",
         "Cinematic crop", "Bokeh focus close-up", "Face-focused frame", "Dynamic perspective", "Overhead diagonal", "Hero angle"
     ],
-
     lighting: [
         "",
         "Rim lighting", "Golden hour light", "Soft studio glow", "Neon cyberpunk glow", "Moonlit ambiance", "Fire-lit glow", "Sunset backlight",
@@ -75,7 +66,6 @@ export const optionsData = {
         "Magic aura glow", "Stormy flash light", "City night reflections", "Dim fluorescent", "Fairy light sparkle", "Natural daylight filter",
         "Strobe lighting", "Dream haze lighting", "Key-Light"
     ],
-
     background: [
         "",
         "Plain white background", "Cherry blossom trees", "Cyberpunk city", "Magical forest", "Futuristic skyline", "Ancient ruins", "Sunset beach",
@@ -84,7 +74,6 @@ export const optionsData = {
         "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room", "Newsroom", "News Studio", "Onseen", "Club",
         "Factory", "SSIA HQ", "Car Interior", "Suburban Area Park", "Flower Park"
     ],
-
     clothing: [
         "",
         "Casual t-shirt", "Elegant dress", "Business suit", "Hoodie", "Kimono", "Leather jacket", "School uniform", "Cyberpunk outfit", "Streetwear",
@@ -92,14 +81,12 @@ export const optionsData = {
         "Tank top and jeans", "Overalls", "Traditional hanbok", "Lab coat", "Bikini/swimsuit", "Battle robe", "Wedding dress", "Sailor uniform",
         "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "SWAT Uniform", "Special Agent Suit"
     ],
-
     clothingColor: [
         "",
         "Black", "White", "Red", "Blue", "Green", "Purple", "Pink", "Navy blue", "Golden", "Silver", "Turquoise", "Lavender", "Brown", "Dark grey",
         "Light grey", "Beige", "Coral", "Maroon", "Pastel blue", "Pastel pink", "Olive green", "Orange", "Crimson", "Sky blue", "Teal", "Neon yellow",
         "Ivory", "Emerald", "Midnight purple"
     ],
-
     faceAccessories: [
         "",
         "Glasses", "Sunglasses", "Eye patch", "Face mask", "Reading glasses", "Round glasses", "Cyberpunk visor", "Monocle", "Bandage across nose",
@@ -107,7 +94,6 @@ export const optionsData = {
         "Steampunk goggles", "Breathing apparatus", "AR glasses", "Crystal eyepiece", "Glowing contact lens", "Golden mask", "Half-face mask",
         "Futuristic faceplate", "Face barcode", "Ear-to-ear headset", "Dragon mark", "Forehead gem", "Visor with UI", "Retina Contact Lens"
     ],
-
     pose: [
         "",
         "Standing confidently", "Sitting casually", "Walking forward", "Arms crossed", "Hand on hip", "Fighting stance", "Dancing", "Looking over shoulder",
@@ -115,7 +101,6 @@ export const optionsData = {
         "Casting spell", "Floating", "Back turned", "Kicking", "Stretching", "Singing", "Holding hands out", "Protective stance", "Hugging something",
         "Martial arts stance", "Crouching", "Pointing", "Driving", "Sleeping"
     ],
-
     hairAccessory: [
         "",
         "Headband", "Hair clips", "Floral hairpiece", "Ribbons", "Tiara", "Cyberpunk hairpiece", "Bow", "Cat ears", "Devil horns", "Halo",
@@ -123,7 +108,6 @@ export const optionsData = {
         "Spiked accessory", "Braided beads", "Traditional pin", "Leaf crown", "Moon ornament", "Dragon pin", "Music note clip", "Candy-shaped clip",
         "Spiderweb clip", "Rainbow hair clip", "Skull hairpin"
     ],
-
     gunPose: [
         "",
         "Drawing a gun", "Aiming gun", "Holding gun at side", "Two-handed gun grip", "Dual wielding guns", "Gun over shoulder", "Gun in holster",
@@ -132,7 +116,6 @@ export const optionsData = {
         "Assassin-style draw", "Underarm aim", "Tactical lean pose", "Quick draw pose", "Gun pointed downward", "Futuristic gun stance",
         "Backflip shoot", "Empty gun expression", "Spinning gun trick"
     ],
-
     effects: [
         "",
         "Soft blur", "Particle effects", "Depth of field", "Film grain", "Glitch effects", "Ethereal glow", "Smoke trails", "Magic aura", "Rain droplets",
@@ -142,7 +125,14 @@ export const optionsData = {
     ]
 };
 
-export function loadOptions() {
+function createOptionElement(option) {
+    const optionElement = document.createElement('option');
+    optionElement.value = option;
+    optionElement.textContent = option;
+    return optionElement;
+}
+
+function loadOptions() {
     Object.entries(optionsData).forEach(([key, options]) => {
         const sanitizedId = key.replace(/([A-Z])/g, '-$1').toLowerCase();
         const selectElement = document.getElementById(sanitizedId);
@@ -150,11 +140,10 @@ export function loadOptions() {
         if (selectElement) {
             selectElement.innerHTML = '';
             options.forEach(option => {
-                const optionElement = document.createElement('option');
-                optionElement.value = option;
-                optionElement.textContent = option;
-                selectElement.appendChild(optionElement);
+                selectElement.appendChild(createOptionElement(option));
             });
         }
     });
-        }
+}
+
+export { optionsData, loadOptions };
