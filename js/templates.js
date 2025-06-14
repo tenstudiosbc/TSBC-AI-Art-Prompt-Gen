@@ -69,6 +69,55 @@ const templates = [
             "lighting": "Moonlit ambiance",
             "background": "Gothic architecture"
         }
+    },
+
+    {
+        name: "Steampunk Inventor",
+        description: "Inventive character with steampunk aesthetics",
+        settings: {
+            "art-style": "Steampunk illustration",
+            "clothing": "Victorian engineer outfit",
+            "face-accessories": "Goggles",
+            "background": "Industrial workshop",
+            "lighting": "Warm lamp light",
+            "mood": "Curious"
+        }
+    },
+    {
+        name: "Modern Streetwear",
+        description: "Trendy character in modern street fashion",
+        settings: {
+            "art-style": "Urban manga",
+            "clothing": "Streetwear hoodie",
+            "clothing-color": "Vibrant colors",
+            "background": "Graffiti wall",
+            "lighting": "Daylight",
+            "mood": "Cool"
+        }
+    },
+    {
+        name: "Medieval Mage",
+        description: "Mystical mage from a medieval fantasy world",
+        settings: {
+            "art-style": "Classic fantasy art",
+            "clothing": "Mage robes",
+            "effects": "Magical aura",
+            "background": "Ancient library",
+            "lighting": "Candlelight",
+            "mood": "Wise"
+        }
+    },
+    {
+        name: "Sci-Fi Explorer",
+        description: "Adventurous explorer in a sci-fi universe",
+        settings: {
+            "art-style": "Futuristic concept art",
+            "clothing": "Space suit",
+            "background": "Alien planet",
+            "lighting": "Harsh alien sunlight",
+            "effects": "Lens flare",
+            "mood": "Adventurous"
+        }
     }
 ];
 
