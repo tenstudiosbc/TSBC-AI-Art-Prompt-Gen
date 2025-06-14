@@ -139,7 +139,14 @@ export const optionsData = {
         "Urban rooftop",
         "Enchanted garden",
         "Beachside House",
-        "Downtown Streets"
+        "Downtown Streets",
+        "Classroom",
+        "Medival Town",
+        "Castle Ballroom",
+        "Boat",
+        "Parking Lot",
+        "Shop",
+        "Boutique"
     ],
     
     clothing: [
@@ -153,7 +160,8 @@ export const optionsData = {
         "School uniform",
         "Cyberpunk outfit",
         "Streetwear",
-        "Elegant Dress"
+        "Elegant Dress",
+        "Tactical Uniform"
     ],
     
     clothingColor: [
