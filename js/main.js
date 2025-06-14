@@ -1,52 +1,77 @@
 // Main JavaScript - imports all modules
-import { initializeVisibilityControls } from './visibility.js';
-import { initializePromptGenerator } from './prompt-generator.js';
-import { initializeClipboard } from './clipboard.js';
 import { loadOptions } from './options.js';
+import { initializeVisibilityControls } from './visibility.js';
+import { initializeTemplates } from './templates.js';
+import { initializeHistory } from './history.js';
+import { initializeFavorites } from './favorites.js';
+import { initializePromptGenerator } from './prompt-generator.js';
+import { initializeAdvanced } from './advanced.js';
 
-// Initialize the application
+// Initialize tab navigation
+function initializeTabs() {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            button.classList.add('active');
+            const tabId = button.getAttribute('data-tab');
+            const activeContent = document.getElementById(`${tabId}-tab`);
+            if (activeContent) {
+                activeContent.classList.add('active');
+            }
+        });
+    });
+}
+
+// Toast notification system
+window.showToast = function(message, type = 'info', duration = 3000) {
+    const toast = document.getElementById('toast-notification');
+    const toastMessage = document.getElementById('toast-message');
+    
+    if (!toast || !toastMessage) return;
+    
+    // Clear existing timeout
+    if (window.toastTimeout) {
+        clearTimeout(window.toastTimeout);
+        toast.classList.remove('show');
+    }
+    
+    toast.className = `toast ${type}`;
+    toastMessage.textContent = message;
+    
+    requestAnimationFrame(() => {
+        toast.classList.add('show');
+    });
+    
+    window.toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+    }, duration);
+};
+
+// Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('🎨 TSBC AI Art Prompt Maker v2.0.0 - Initializing...');
+    
+    // Initialize core features
     loadOptions();
     initializeVisibilityControls();
     initializePromptGenerator();
-    initializeClipboard();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    // Initialize new features
-    initializeTabs();
     initializeTemplates();
     initializeHistory();
-    initializeProgress();
-    initializeToast();
+    initializeFavorites();
     initializeAdvanced();
+    initializeTabs();
     
     console.log('✨ Application initialized successfully!');
     
-    // Show welcome animation
-    showWelcomeAnimation();
+    // Show welcome message after slight delay
+    setTimeout(() => {
+        window.showToast('Welcome to TSBC AI Art Prompt Maker v2.0!', 'info', 3000);
+    }, 1000);
 });
-
-function showWelcomeAnimation() {
-    const hero = document.querySelector('.hero-header');
-    if (hero) {
-        hero.style.transform = 'translateY(-20px)';
-        hero.style.opacity = '0';
-        
-        setTimeout(() => {
-            hero.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-            hero.style.transform = 'translateY(0)';
-            hero.style.opacity = '1';
-        }, 100);
-    }
-}
-=======
-});
->>>>>>> parent of 70d534d (UI/UX overhaul and added advanced functionality for more options)
-=======
-});
->>>>>>> parent of 70d534d (UI/UX overhaul and added advanced functionality for more options)
-=======
-});
->>>>>>> parent of 70d534d (UI/UX overhaul and added advanced functionality for more options)

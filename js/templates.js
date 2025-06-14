@@ -70,53 +70,70 @@ const templates = [
             "background": "Gothic architecture"
         }
     },
-
+    // --- New Templates Below ---
+    {
+        name: "Sci-Fi Mecha Pilot",
+        description: "Futuristic pilot in a sci-fi mecha suit",
+        settings: {
+            "art-style": "3D",
+            "clothing": "Futuristic pilot suit",
+            "background": "Futuristic skyline",
+            "lighting": "Neon cyberpunk glow",
+            "pose": "Standing confidently",
+            "mood": "Determined",
+            "effects": "Hologram distortion"
+        }
+    },
+    {
+        name: "Magical Girl Transformation",
+        description: "Sparkling magical girl in transformation sequence",
+        settings: {
+            "art-style": "Classic shoujo anime",
+            "clothing": "Sailor uniform",
+            "background": "Cherry blossom trees",
+            "lighting": "Magic aura glow",
+            "effects": "Aura rings",
+            "mood": "Hopeful",
+            "pose": "Floating"
+        }
+    },
+    {
+        name: "Noir Detective",
+        description: "Moody noir detective scene",
+        settings: {
+            "art-style": "Noir comic style",
+            "clothing": "Trench coat",
+            "background": "Downtown streets",
+            "lighting": "Harsh top light",
+            "mood": "Stoic",
+            "pose": "Leaning on wall",
+            "effects": "Film grain"
+        }
+    },
     {
         name: "Steampunk Inventor",
-        description: "Inventive character with steampunk aesthetics",
+        description: "Inventor in a steampunk workshop",
         settings: {
-            "art-style": "Steampunk illustration",
-            "clothing": "Victorian engineer outfit",
-            "face-accessories": "Goggles",
-            "background": "Industrial workshop",
-            "lighting": "Warm lamp light",
-            "mood": "Curious"
+            "art-style": "Steampunk fantasy",
+            "clothing": "Lab coat",
+            "face-accessories": "Steampunk goggles",
+            "background": "Factory",
+            "lighting": "Interior lamp glow",
+            "mood": "Energetic",
+            "pose": "Hands in pockets"
         }
     },
     {
-        name: "Modern Streetwear",
-        description: "Trendy character in modern street fashion",
+        name: "Beach Day",
+        description: "Relaxed character enjoying a sunny beach day",
         settings: {
-            "art-style": "Urban manga",
-            "clothing": "Streetwear hoodie",
-            "clothing-color": "Vibrant colors",
-            "background": "Graffiti wall",
-            "lighting": "Daylight",
-            "mood": "Cool"
-        }
-    },
-    {
-        name: "Medieval Mage",
-        description: "Mystical mage from a medieval fantasy world",
-        settings: {
-            "art-style": "Classic fantasy art",
-            "clothing": "Mage robes",
-            "effects": "Magical aura",
-            "background": "Ancient library",
-            "lighting": "Candlelight",
-            "mood": "Wise"
-        }
-    },
-    {
-        name: "Sci-Fi Explorer",
-        description: "Adventurous explorer in a sci-fi universe",
-        settings: {
-            "art-style": "Futuristic concept art",
-            "clothing": "Space suit",
-            "background": "Alien planet",
-            "lighting": "Harsh alien sunlight",
-            "effects": "Lens flare",
-            "mood": "Adventurous"
+            "art-style": "Watercolor sketch",
+            "clothing": "Bikini/swimsuit",
+            "background": "Sunset beach",
+            "lighting": "Sunset backlight",
+            "mood": "Joyful",
+            "pose": "Sitting casually",
+            "effects": "Soft blur"
         }
     }
 ];
@@ -184,12 +201,19 @@ function applyTemplate(template) {
         const field = document.getElementById(fieldId);
         if (field && value) {
             field.value = value;
-            
             // Trigger change event to update visibility controls
             field.dispatchEvent(new Event('change', { bubbles: true }));
         }
     });
-    
+
+    // Clear advanced custom fields when applying a template
+    const customPose = document.getElementById('custom-pose');
+    const customBackground = document.getElementById('custom-background');
+    const customPersonality = document.getElementById('custom-personality');
+    if (customPose) customPose.value = '';
+    if (customBackground) customBackground.value = '';
+    if (customPersonality) customPersonality.value = '';
+
     // Show success message
     if (window.showToast) {
         window.showToast(`Applied template: ${template.name}`, 'success');

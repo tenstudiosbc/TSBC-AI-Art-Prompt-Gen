@@ -72,7 +72,15 @@ const optionsData = {
         "Urban rooftop", "Enchanted garden", "Beachside house", "Downtown streets", "Classroom", "Medieval town", "Castle ballroom", "Boat",
         "Parking lot", "Shop", "Boutique", "Graveyard", "Snowy mountain", "Train station", "Library interior", "Abandoned warehouse", "Moon surface",
         "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room", "Newsroom", "News Studio", "Onseen", "Club",
-        "Factory", "SSIA HQ", "Car Interior", "Suburban Area Park", "Flower Park"
+        "Factory", "SSIA HQ", "Car Interior", "Suburban Area Park", "Flower Park",
+        "Rainy city street", "Desert oasis", "Mountain peak", "Underwater scene", "Coral reef", "Deep sea", "Haunted house", "Victorian mansion",
+        "Japanese garden", "Zen temple", "Bamboo forest", "Rice field", "Windmill field", "Sunflower field", "Lavender field", "Pumpkin patch",
+        "Apple orchard", "Vineyard", "Farm barn", "Countryside road", "Old western town", "Saloon", "Train interior", "Airport terminal",
+        "Airplane cabin", "Helicopter pad", "Spacecraft interior", "Alien planet", "Crystal cave", "Lava cave", "Ice cave", "Glacier",
+        "Northern lights sky", "Meteor shower", "Starry night", "Comet trail", "Rainbow sky", "Floating islands", "Steampunk city", "Clock tower",
+        "Marketplace", "Circus tent", "Carnival", "Theme park", "Roller coaster", "Ferris wheel", "Zoo", "Safari", "Jungle canopy", "Rainforest",
+        "Swamp", "Mangrove", "Waterfall", "Riverbank", "Lakeside dock", "Fishing village", "Harbor", "Port city", "Pirate ship", "Treasure island",
+        "Volcano eruption", "Tropical island", "Palm beach", "Coral atoll", "Arctic tundra", "Igloo village", "Snowy forest", "Christmas market"
     ],
     clothing: [
         "",
@@ -99,7 +107,15 @@ const optionsData = {
         "Standing confidently", "Sitting casually", "Walking forward", "Arms crossed", "Hand on hip", "Fighting stance", "Dancing", "Looking over shoulder",
         "With gun", "Kneeling", "Leaning on wall", "Running", "Jumping", "Lying down", "Peace sign", "Holding object", "Hands in pockets",
         "Casting spell", "Floating", "Back turned", "Kicking", "Stretching", "Singing", "Holding hands out", "Protective stance", "Hugging something",
-        "Martial arts stance", "Crouching", "Pointing", "Driving", "Sleeping"
+        "Martial arts stance", "Crouching", "Pointing", "Driving", "Sleeping",
+        "Saluting", "Waving", "Reading a book", "Typing on laptop", "Taking a selfie", "Holding umbrella", "Sipping tea", "Leaning on table",
+        "Jumping in excitement", "Holding a pet", "Carrying groceries", "Playing guitar", "Playing violin", "Painting", "Sketching", "Cooking",
+        "Eating", "Drinking coffee", "Listening to music", "Tying shoelaces", "Fixing hair", "Applying makeup", "Looking at phone", "Taking notes",
+        "Meditating", "Yoga pose", "Stretching arms up", "Balancing on one foot", "Skateboarding", "Cycling", "Rollerblading", "Surfing",
+        "Swimming", "Diving", "Climbing", "Hiking", "Fishing", "Rowing a boat", "Skiing", "Snowboarding", "Ice skating", "Dancing ballet",
+        "Breakdancing", "Doing push-ups", "Doing sit-ups", "Jumping rope", "Boxing stance", "Shadow boxing", "Playing basketball", "Playing soccer",
+        "Playing baseball", "Golf swing", "Archery pose", "Sword fighting", "Shield block", "Magic summoning", "Teleporting", "Invisible wall pose",
+        "Superhero landing", "Flying", "Hovering", "Backflip", "Cartwheel", "Handstand", "Splits", "Piggyback ride", "Carrying someone", "Giving a piggyback"
     ],
     hairAccessory: [
         "",
