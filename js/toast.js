@@ -7,7 +7,7 @@ export function initializeToast() {
     
     // Test toast on load (optional)
     setTimeout(() => {
-        showToast('Welcome to TSBC AI Art Prompt Maker v2.0!', 'info');
+        showToast('Welcome to TSBC AI Art Image Prompt Generator 2.0.1', 'info');
     }, 1000);
 }
 
