@@ -1,28 +1,56 @@
-// Clipboard functionality
+// Enhanced clipboard functionality
 export function initializeClipboard() {
     const copyButton = document.getElementById("copy-prompt");
-    copyButton.addEventListener("click", copyToClipboard);
+    const copyNegativeButton = document.getElementById("copy-negative");
+    
+    if (copyButton) {
+        copyButton.addEventListener("click", () => copyToClipboard('prompt'));
+    }
+    
+    if (copyNegativeButton) {
+        copyNegativeButton.addEventListener("click", () => copyToClipboard('negative'));
+    }
 }
 
-async function copyToClipboard() {
-    const promptText = document.getElementById("prompt-result").textContent;
+async function copyToClipboard(type = 'prompt') {
+    let textToCopy = '';
+    let successMessage = '';
     
-    if (promptText === "Your prompt will appear here...") {
-        showNotification("Generate a prompt first before copying!", "warning");
-        return;
+    if (type === 'prompt') {
+        const promptText = document.getElementById("prompt-result").textContent;
+        if (promptText === "Your customized AI art prompt will appear here...") {
+            if (window.showToast) {
+                window.showToast("Generate a prompt first before copying!", "warning");
+            }
+            return;
+        }
+        textToCopy = promptText;
+        successMessage = "Prompt copied to clipboard!";
+    } else if (type === 'negative') {
+        const negativeText = document.getElementById("negative-result")?.textContent || '';
+        if (!negativeText.trim()) {
+            if (window.showToast) {
+                window.showToast("No negative prompt to copy!", "warning");
+            }
+            return;
+        }
+        textToCopy = negativeText;
+        successMessage = "Negative prompt copied to clipboard!";
     }
     
     try {
-        await navigator.clipboard.writeText(promptText);
-        showNotification("Prompt copied to clipboard!", "success");
+        await navigator.clipboard.writeText(textToCopy);
+        if (window.showToast) {
+            window.showToast(successMessage, "success");
+        }
     } catch (err) {
         console.error("Failed to copy: ", err);
         // Fallback for older browsers
-        fallbackCopyToClipboard(promptText);
+        fallbackCopyToClipboard(textToCopy, successMessage);
     }
 }
 
-function fallbackCopyToClipboard(text) {
+function fallbackCopyToClipboard(text, successMessage) {
     const textArea = document.createElement("textarea");
     textArea.value = text;
     textArea.style.position = "fixed";
@@ -33,54 +61,17 @@ function fallbackCopyToClipboard(text) {
     textArea.select();
     
     try {
-        document.execCommand('copy');
-        showNotification("Prompt copied to clipboard!", "success");
+        const successful = document.execCommand('copy');
+        if (successful && window.showToast) {
+            window.showToast(successMessage, "success");
+        } else if (window.showToast) {
+            window.showToast("Failed to copy prompt", "error");
+        }
     } catch (err) {
-        showNotification("Failed to copy prompt", "error");
+        if (window.showToast) {
+            window.showToast("Failed to copy prompt", "error");
+        }
     }
     
     document.body.removeChild(textArea);
-}
-
-function showNotification(message, type = "info") {
-    // Create notification element
-    const notification = document.createElement("div");
-    notification.className = `notification notification--${type}`;
-    notification.textContent = message;
-    
-    // Style the notification
-    Object.assign(notification.style, {
-        position: "fixed",
-        top: "20px",
-        right: "20px",
-        padding: "12px 20px",
-        borderRadius: "8px",
-        color: "white",
-        fontWeight: "bold",
-        zIndex: "10000",
-        transition: "all 0.3s ease"
-    });
-    
-    // Set background color based on type
-    const colors = {
-        success: "#4CAF50",
-        warning: "#FF9800", 
-        error: "#F44336",
-        info: "#2196F3"
-    };
-    notification.style.backgroundColor = colors[type] || colors.info;
-    
-    // Add to document
-    document.body.appendChild(notification);
-    
-    // Remove after 3 seconds
-    setTimeout(() => {
-        notification.style.opacity = "0";
-        notification.style.transform = "translateX(100%)";
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        }, 300);
-    }, 3000);
 }
