@@ -8,50 +8,64 @@ export function initializePromptGenerator() {
 }
 
 function generatePrompt() {
-    // Add loading state
-    const generateButton = document.getElementById("generate-prompt");
-    generateButton.classList.add('btn-loading');
-    generateButton.disabled = true;
-    
-    setTimeout(() => {
-        try {
-            const formData = getFormData();
-            const prompt = buildPrompt(formData);
-            const negativePrompt = formData.negativePrompt;
+    try {
+        // Show loading state
+        const generateButton = document.getElementById("generate-prompt");
+        const promptResult = document.getElementById("prompt-result");
+        
+        if (!generateButton || !promptResult) {
+            throw new Error("Required elements not found");
+        }
 
-            // NSFW content filter
-            if (containsNSFW(prompt)) {
-                if (window.showToast) {
-                    window.showToast('Warning: Your prompt contains NSFW content. Certain AI Image Generators like BingAI Image may not work.', 'warning');
-                }
-                // Optionally, you can still display the prompt or block it entirely.
-                displayPrompt(prompt, negativePrompt);
-                updateCharacterCount(prompt);
-                return;
-            }
-            
-            displayPrompt(prompt, negativePrompt);
-            updateCharacterCount(prompt);
-            
-            // Add to history
-            if (window.addToHistory) {
-                window.addToHistory(prompt, formData);
-            }
-            
-            if (window.showToast) {
-                window.showToast('Prompt generated successfully!', 'success');
-            }
-        } catch (error) {
-            console.error('Error generating prompt:', error);
-            if (window.showToast) {
-                window.showToast('Error generating prompt', 'error');
-            }
-        } finally {
-            // Remove loading state
+        generateButton.classList.add('btn-loading');
+        generateButton.disabled = true;
+        
+        // Clear previous errors
+        promptResult.classList.remove('error');
+        
+        const formData = getFormData();
+        
+        // Validate required fields
+        if (!formData.artStyle) {
+            throw new Error("Please select an art style");
+        }
+
+        const prompt = buildPrompt(formData);
+        const negativePrompt = formData.negativePrompt;
+        
+        // Check if prompt was generated
+        if (!prompt || prompt.trim() === '') {
+            throw new Error("Failed to generate prompt");
+        }
+
+        displayPrompt(prompt, negativePrompt);
+        updateCharacterCount(prompt);
+        
+        // Save to history
+        if (window.addToHistory) {
+            window.addToHistory(prompt, formData);
+        }
+        
+        showToast('Prompt generated successfully!', 'success');
+        
+    } catch (error) {
+        console.error('Error generating prompt:', error);
+        showToast(error.message || 'Error generating prompt', 'error');
+        
+        // Show error in prompt area
+        const promptResult = document.getElementById("prompt-result");
+        if (promptResult) {
+            promptResult.textContent = `Error: ${error.message}`;
+            promptResult.classList.add('error');
+        }
+    } finally {
+        // Remove loading state
+        const generateButton = document.getElementById("generate-prompt");
+        if (generateButton) {
             generateButton.classList.remove('btn-loading');
             generateButton.disabled = false;
         }
-    }, 500); // Small delay for loading effect
+    }
 }
 
 function getFormData() {
@@ -218,44 +232,58 @@ function buildPrompt(data) {
 }
 
 function displayPrompt(prompt, negativePrompt = '') {
-    const promptResult = document.getElementById("prompt-result");
-    const negativeResult = document.getElementById("negative-result");
-    const negativeDisplay = document.getElementById("negative-display");
-    const copyNegativeBtn = document.getElementById("copy-negative");
-    
-    if (promptResult) {
+    try {
+        const promptResult = document.getElementById("prompt-result");
+        const negativeResult = document.getElementById("negative-result");
+        const negativeDisplay = document.getElementById("negative-display");
+        const copyNegativeBtn = document.getElementById("copy-negative");
+        
+        if (!promptResult) return;
+        
+        // Add animation class
+        promptResult.classList.remove('fade-in');
+        void promptResult.offsetWidth; // Trigger reflow
+        promptResult.classList.add('fade-in');
+        
         promptResult.textContent = prompt;
         
-        // Add subtle animation
-        promptResult.style.opacity = '0';
-        promptResult.style.transform = 'translateY(10px)';
+        // Handle negative prompt
+        if (negativePrompt && negativePrompt.trim()) {
+            if (negativeResult) negativeResult.textContent = negativePrompt;
+            if (negativeDisplay) negativeDisplay.style.display = 'block';
+            if (copyNegativeBtn) copyNegativeBtn.style.display = 'flex';
+        } else {
+            if (negativeDisplay) negativeDisplay.style.display = 'none';
+            if (copyNegativeBtn) copyNegativeBtn.style.display = 'none';
+        }
         
-        setTimeout(() => {
-            promptResult.style.transition = 'all 0.3s ease';
-            promptResult.style.opacity = '1';
-            promptResult.style.transform = 'translateY(0)';
-        }, 100);
+    } catch (error) {
+        console.error('Error displaying prompt:', error);
+    }
+}
+
+function showToast(message, type = 'info') {
+    const toast = document.getElementById('toast-notification');
+    const toastMessage = document.getElementById('toast-message');
+    
+    if (!toast || !toastMessage) return;
+    
+    // Clear existing timeouts
+    if (window.toastTimeout) {
+        clearTimeout(window.toastTimeout);
     }
     
-    // Handle negative prompt display
-    if (negativePrompt && negativePrompt.trim()) {
-        if (negativeResult) {
-            negativeResult.textContent = negativePrompt;
-        }
-        if (negativeDisplay) {
-            negativeDisplay.style.display = 'block';
-        }
-        if (copyNegativeBtn) {
-            copyNegativeBtn.style.display = 'flex';
-        }
-    } else {
-        if (negativeDisplay) {
-            negativeDisplay.style.display = 'none';
-        }
-        if (copyNegativeBtn) {
-            copyNegativeBtn.style.display = 'none';
-        }
-    }
+    // Update toast
+    toast.className = `toast ${type}`;
+    toastMessage.textContent = message;
+    
+    // Show toast
+    toast.classList.add('show');
+    
+    // Hide after delay
+    window.toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
 }
 
 function clearPrompt() {
