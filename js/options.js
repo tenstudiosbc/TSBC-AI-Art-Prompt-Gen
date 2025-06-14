@@ -56,7 +56,7 @@ export const optionsData = {
         "",
         "Happy", "Melancholic", "Mysterious", "Confident", "Dreamy", "Fierce", "Serene", "Playful", "Determined", "Flirty", "Sad", "Seductive",
         "Angry", "Calm", "Bashful", "Joyful", "Stoic", "Grumpy", "Smug", "Cold-hearted", "Energetic", "Lonely", "Fearful", "Hopeful", "Proud",
-        "Surprised", "Sassy", "Mischievous", "Tranquil"
+        "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy"
     ],
 
     cameraAngle: [
@@ -81,7 +81,7 @@ export const optionsData = {
         "Plain white background", "Cherry blossom trees", "Cyberpunk city", "Magical forest", "Futuristic skyline", "Ancient ruins", "Sunset beach",
         "Urban rooftop", "Enchanted garden", "Beachside house", "Downtown streets", "Classroom", "Medieval town", "Castle ballroom", "Boat",
         "Parking lot", "Shop", "Boutique", "Graveyard", "Snowy mountain", "Train station", "Library interior", "Abandoned warehouse", "Moon surface",
-        "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room"
+        "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room", "Newsroom", "News Studio"
     ],
 
     clothing: [
