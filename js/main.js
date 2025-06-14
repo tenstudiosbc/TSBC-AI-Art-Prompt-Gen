@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeClipboard();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     // Initialize new features
     initializeTabs();
@@ -40,6 +41,9 @@ function showWelcomeAnimation() {
         }, 100);
     }
 }
+=======
+});
+>>>>>>> parent of 70d534d (UI/UX overhaul and added advanced functionality for more options)
 =======
 });
 >>>>>>> parent of 70d534d (UI/UX overhaul and added advanced functionality for more options)

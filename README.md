@@ -20,12 +20,15 @@ TSBC-AI-Art-Prompt-Gen is a web-based tool designed to generate creative art pro
    git clone https://github.com/tenstudiosbc/TSBC-AI-Art-Prompt-Gen.git
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ## Contributors
 
 <a href="https://github.com/tenstudiosbc/tsbc-ai-art-prompt-gen/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=tenstudiosbc/tsbc-ai-art-prompt-gen"  alt="TSBC Contributors"/>
 </a>
+=======
+>>>>>>> parent of 70d534d (UI/UX overhaul and added advanced functionality for more options)
 =======
 >>>>>>> parent of 70d534d (UI/UX overhaul and added advanced functionality for more options)
 =======
