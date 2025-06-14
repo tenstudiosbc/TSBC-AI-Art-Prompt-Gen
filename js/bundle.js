@@ -39,7 +39,7 @@ const optionsData = {
         "",
         "Black", "Brown", "Blonde", "Red", "Blue", "Green", "Pink", "Purple", "Silver", "White", "Lavender", "Auburn", "Orange", "Turquoise",
         "Rose gold", "Mint green", "Pastel pink", "Pastel purple", "Peach", "Grey", "Charcoal", "Multicolor", "Rainbow", "Neon green", "Ice blue",
-        "Dark teal", "Platinum blonde", "Jet black", "Holographic"
+        "Dark teal", "Platinum blonde", "Jet black", "Holographic", "Brunette", "Green-Tea", "Rosy"
     ],
 
     eyeColor: [
@@ -53,7 +53,7 @@ const optionsData = {
         "",
         "Slim", "Athletic", "Muscular", "Petite", "Curvy", "Average", "Tall", "Short", "Toned", "Plus-size", "Chubby", "Lean", "Stocky", "Hourglass",
         "Pear-shaped", "Apple-shaped", "Broad-shouldered", "Lanky", "Thin", "Voluptuous", "Compact", "Delicate", "Robust", "Graceful", "Sturdy",
-        "Slender", "Thickset", "Dancer's build", "Fantasy warrior physique"
+        "Slender", "Thickset", "Dancer's build", "Fantasy warrior physique", "Model's Build"
     ],
 
     mood: [
@@ -77,7 +77,7 @@ const optionsData = {
         "Overcast natural light", "Soft bounce light", "Spotlight focus", "Harsh top light", "Side lighting", "Color splash lighting", "Twilight lighting",
         "Interior lamp glow", "Candlelit glow", "Underlight (horror)", "Bioluminescent glow", "Northern lights", "Disco lights", "UV blacklight",
         "Magic aura glow", "Stormy flash light", "City night reflections", "Dim fluorescent", "Fairy light sparkle", "Natural daylight filter",
-        "Strobe lighting", "Dream haze lighting"
+        "Strobe lighting", "Dream haze lighting", "Rain-soaked"
     ],
 
     background: [
@@ -94,7 +94,7 @@ const optionsData = {
         "Casual t-shirt", "Elegant dress", "Business suit", "Hoodie", "Kimono", "Leather jacket", "School uniform", "Cyberpunk outfit", "Streetwear",
         "Tactical uniform", "Fantasy armor", "Sportswear", "Military uniform", "Ballgown", "Cloak and tunic", "Gothic lolita dress", "Trench coat",
         "Tank top and jeans", "Overalls", "Traditional hanbok", "Lab coat", "Bikini/swimsuit", "Battle robe", "Wedding dress", "Sailor uniform",
-        "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat"
+        "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "Designer Dress"
     ],
 
     clothingColor: [
@@ -109,7 +109,7 @@ const optionsData = {
         "Glasses", "Sunglasses", "Eye patch", "Face mask", "Reading glasses", "Round glasses", "Cyberpunk visor", "Monocle", "Bandage across nose",
         "Transparent mask", "VR goggles", "High-tech scouter", "Face tattoo", "Decorative gems", "Tribal face paint", "Makeup tear streak",
         "Steampunk goggles", "Breathing apparatus", "AR glasses", "Crystal eyepiece", "Glowing contact lens", "Golden mask", "Half-face mask",
-        "Futuristic faceplate", "Face barcode", "Ear-to-ear headset", "Dragon mark", "Forehead gem", "Visor with UI"
+        "Futuristic faceplate", "Face barcode", "Ear-to-ear headset", "Dragon mark", "Forehead gem", "Visor with UI", "Ear Comms"
     ],
 
     pose: [
@@ -117,7 +117,7 @@ const optionsData = {
         "Standing confidently", "Sitting casually", "Walking forward", "Arms crossed", "Hand on hip", "Fighting stance", "Dancing", "Looking over shoulder",
         "With gun", "Kneeling", "Leaning on wall", "Running", "Jumping", "Lying down", "Peace sign", "Holding object", "Hands in pockets",
         "Casting spell", "Floating", "Back turned", "Kicking", "Stretching", "Singing", "Holding hands out", "Protective stance", "Hugging something",
-        "Martial arts stance", "Crouching", "Pointing"
+        "Martial arts stance", "Crouching", "Pointing", "Eating", "Sleeping"
     ],
 
     hairAccessory: [
@@ -125,7 +125,7 @@ const optionsData = {
         "Headband", "Hair clips", "Floral hairpiece", "Ribbons", "Tiara", "Cyberpunk hairpiece", "Bow", "Cat ears", "Devil horns", "Halo",
         "Butterfly clip", "Gemstone pin", "Feather decoration", "Star clip", "Mini top hat", "Scrunchie", "Pearl string", "Golden barrette",
         "Spiked accessory", "Braided beads", "Traditional pin", "Leaf crown", "Moon ornament", "Dragon pin", "Music note clip", "Candy-shaped clip",
-        "Spiderweb clip", "Rainbow hair clip", "Skull hairpin"
+        "Spiderweb clip", "Rainbow hair clip", "Skull hairpin", "Little SSIA Insignia"
     ],
 
     gunPose: [
@@ -142,7 +142,7 @@ const optionsData = {
         "Soft blur", "Particle effects", "Depth of field", "Film grain", "Glitch effects", "Ethereal glow", "Smoke trails", "Magic aura", "Rain droplets",
         "Fire sparks", "Ice shards", "Electric sparks", "Floating leaves", "Cherry blossom petals", "Snowfall", "Motion blur", "Blood splatter",
         "Lens flare", "Dust particles", "Time distortion", "Wind swirl", "Fireflies", "Shadow tendrils", "Hologram distortion", "Shattered glass effect",
-        "Aura rings", "Light beams", "Energy ripple", "Neon outline"
+        "Aura rings", "Light beams", "Energy ripple", "Neon outline", "Kaleidoscope", "Hazy Effects"
     ]
 };
 
