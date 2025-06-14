@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSBC AI Art Prompt Maker</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: "Google Sans", sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            padding: 20px;
+            background: linear-gradient(135deg, #ff5722, #e64a19);
+            color: white;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Prompt Builder Container */
+        .prompt-builder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.2);
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        /* Labels */
+        label {
+            font-size: 1.1em;
+            margin-top: 10px;
+            color: #ffccbc;
+        }
+
+        /* Dropdowns & Inputs */
+        select, input {
+            font-size: 1em;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            margin-top: 5px;
+            background-color: #292929;
+            color: white;
+            box-shadow: 0px 2px 5px rgba(255, 87, 34, 0.2);
+            box-sizing: border-box;
+        }
+
+        /* Hair Accessory & Gun Pose Visibility Control */
+        .hair-accessory-container,
+        .gun-pose-container {
+            display: none;
+            width: 100%;
+        }
+
+        .hair-accessory-container.show,
+        .gun-pose-container.show {
+            display: block;
+        }
+
+        /* Button */
+        button {
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #ffb74d, #ff7043);
+            transform: scale(1.05);
+        }
+
+        /* Generated Output */
+        .output {
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.2);
+            max-width: 600px;
+        }
+
+        #prompt-result {
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            text-align: left;
+            word-wrap: break-word;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .prompt-builder {
+                max-width: 90%;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TSBC AI Art Prompt Maker</h1>
+        <h2>Customize prompts with rich stylistic and narrative depth.</h2>
+        <p>Version 1.0.0</p>
+        <marquee>Use it wisely and don't commercialize it</marquee>
+    </header>
+
+    <main>
+        <div class="prompt-builder">
+            <label for="art-style">Art Style:</label>
+            <select id="art-style">
+                <option value="Painterly anime">Painterly anime</option>
+                <option value="Semi-realistic anime">Semi-realistic anime</option>
+                <option value="Cyberpunk anime style">Cyberpunk anime style</option>
+                <option value="80s/90s vintage anime">80s/90s vintage anime</option>
+                <option value="Watercolor anime">Watercolor anime</option>
+                <option value="Studio Ghibli-inspired">Studio Ghibli-inspired</option>
+                <option value="Cel-shaded">Cel-shaded</option>
+                <option value="Futuristic concept art">Futuristic concept art</option>
+                <option value="Photorealistic">Photorealistic</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <select id="age">
+                <option value="Child">Child</option>
+                <option value="Teen">Teen</option>
+                <option value="Young adult">Young adult</option>
+                <option value="Adult">Adult</option>
+                <option value="Middle-aged">Middle-aged</option>
+                <option value="Elderly">Elderly</option>
+                <option value="Pre-teen">Pre-teen</option>
+                <option value="Unknown (mystery character)">Unknown</option>
+            </select>
+
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="Woman">Woman</option>
+                <option value="Man">Man</option>
+                <option value="Androgynous">Androgynous</option>
+                <option value="Non-binary">Non-binary</option>
+                <option value="Feminine-presenting">Feminine-presenting</option>
+                <option value="Masculine-presenting">Masculine-presenting</option>
+                <option value="AI/Synthetic entity">AI/Synthetic entity</option>
+                <option value="Fantasy race (elf, android, etc.)">Fantasy race</option>
+            </select>
+
+            <label for="hair-style">Hair Style:</label>
+            <select id="hair-style">
+                <option value="Long wavy hair">Long wavy hair</option>
+                <option value="Short spiky hair">Short spiky hair</option>
+                <option value="Medium-length layered hair">Medium-length layered hair</option>
+                <option value="Braided hair">Braided hair</option>
+                <option value="Pixie cut">Pixie cut</option>
+                <option value="Half up, half down">Half up, half down</option>
+                <option value="Tied ponytail">Tied ponytail</option>
+                <option value="Slicked-back cyberpunk hair">Slicked-back cyberpunk hair</option>
+                <option value="Twin tails">Twin tails</option>
+                <option value="Messy bun">Messy bun</option>
+                <option value="Side-swept bangs">Side-swept bangs</option>
+                <option value="Afro">Afro</option>
+                <option value="Bob cut">Bob cut</option>
+                <option value="Undercut">Undercut</option>
+                <option value="French braid">French braid</option>
+                <option value="Top knot">Top knot</option>
+                <option value="Cornrows">Cornrows</option>
+                <option value="Dreadlocks">Dreadlocks</option>
+                <option value="Beach waves">Beach waves</option>
+                <option value="Straight long hair">Straight long hair</option>
+                <option value="Curly short hair">Curly short hair</option>
+                <option value="Mohawk">Mohawk</option>
+                <option value="Space buns">Space buns</option>
+                <option value="Low ponytail">Low ponytail</option>
+                <option value="High ponytail">High ponytail</option>
+                <option value="Fishtail braid">Fishtail braid</option>
+                <option value="Buzz cut">Buzz cut</option>
+                <option value="Shoulder-length hair">Shoulder-length hair</option>
+                <option value="Asymmetrical cut">Asymmetrical cut</option>
+                <option value="Vintage victory rolls">Vintage victory rolls</option>
+                <option value="Short Hair">Short Hair</option>
+                <option value="Shoulder-length Hair">Shoulder-length Hair</option>
+            </select>
+
+            <label for="hair-color">Hair Color:</label>
+            <select id="hair-color">
+                <option value="Black">Black</option>
+                <option value="Brown">Brown</option>
+                <option value="Blonde">Blonde</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Pink">Pink</option>
+                <option value="Purple">Purple</option>
+                <option value="Silver">Silver</option>
+                <option value="White">White</option>
+                <option value="Ombre">Ombre</option>
+                <option value="Rainbow">Rainbow</option>
+            </select>
+
+            <label for="eye-color">Eye Color:</label>
+<select id="eye-color">
+    <option value="Black">Black</option>
+    <option value="Dark Brown">Dark Brown</option>
+    <option value="Light Brown">Light Brown</option>
+    <option value="Amber">Amber</option>
+    <option value="Hazel">Hazel</option>
+    <option value="Honey">Honey</option>
+    <option value="Green">Green</option>
+    <option value="Emerald">Emerald</option>
+    <option value="Olive Green">Olive Green</option>
+    <option value="Blue">Blue</option>
+    <option value="Sky Blue">Sky Blue</option>
+    <option value="Deep Blue">Deep Blue</option>
+    <option value="Aqua">Aqua</option>
+    <option value="Violet">Violet</option>
+    <option value="Purple">Purple</option>
+    <option value="Red">Red</option>
+    <option value="Silver">Silver</option>
+    <option value="Grey">Grey</option>
+    <option value="Heterochromia">Heterochromia</option>
+    <option value="Glowing Neon">Glowing Neon</option>
+</select>
+
+            <div class="hair-accessory-container" id="hair-accessory-container">
+                <label for="hair-accessory">Hair Accessory:</label>
+                <select id="hair-accessory">
+                    <option value="">None</option>
+                    <option value="Headband">Headband</option>
+                    <option value="Hair clips">Hair clips</option>
+                    <option value="Braided crown">Braided crown</option>
+                    <option value="Floral hairpiece">Floral hairpiece</option>
+                    <option value="Tiara">Tiara</option>
+                    <option value="Ribbons">Ribbons</option>
+                    <option value="Pearl hairpin">Pearl hairpin</option>
+                    <option value="Ornamental comb">Ornamental comb</option>
+                    <option value="Minimalist barrette">Minimalist barrette</option>
+                    <option value="Butterfly clip">Butterfly clip</option>
+                    <option value="Gothic lace">Gothic lace</option>
+                    <option value="Cyberpunk hairpiece">Cyberpunk hairpiece</option>
+                </select>
+            </div>
+
+            <label for="mood">Mood:</label>
+            <select id="mood">
+                <option value="Happy">Happy</option>
+                <option value="Melancholic">Melancholic</option>
+                <option value="Mysterious">Mysterious</option>
+                <option value="Confident">Confident</option>
+                <option value="Dreamy">Dreamy</option>
+                <option value="Timid">Timid</option>
+                <option value="Fierce">Fierce</option>
+                <option value="Serene">Serene</option>
+                <option value="Shy">Shy</option>
+                <option value="Angry">Angry</option>
+                <option value="Flirty">Flirty</option>
+                <option value="Curious">Curious</option>
+                <option value="Playful">Playful</option>
+                <option value="Contemplative">Contemplative</option>
+                <option value="Determined">Determined</option>
+            </select>
+
+            <label for="camera-angle">Camera Angle:</label>
+            <select id="camera-angle">
+                <option value="Portrait shot">Portrait shot</option>
+                <option value="Close-up">Close-up</option>
+                <option value="Medium shot">Medium shot</option>
+                <option value="Full body">Full body</option>
+                <option value="Low angle">Low angle</option>
+                <option value="High angle">High angle</option>
+                <option value="Side profile">Side profile</option>
+                <option value="Three-quarter view">Three-quarter view</option>
+                <option value="Over the shoulder">Over the shoulder</option>
+            </select>
+
+            <label for="lighting">Lighting:</label>
+            <select id="lighting">
+                <option value="Rim lighting">Rim lighting</option>
+                <option value="Golden hour light">Golden hour light</option>
+                <option value="Bioluminescent glow">Bioluminescent glow</option>
+                <option value="Volumetric beams">Volumetric beams</option>
+                <option value="Backlit silhouette">Backlit silhouette</option>
+                <option value="Ambient occlusion">Ambient occlusion</option>
+                <option value="Soft studio glow">Soft studio glow</option>
+                <option value="Neon cyberpunk glow">Neon cyberpunk glow</option>
+                <option value="Dynamic strobe">Dynamic strobe</option>
+                <option value="Moonlit ambiance">Moonlit ambiance</option>
+                <option value="Fire-lit glow">Fire-lit glow</option>
+                <option value="Underground industrial lighting">Underground industrial lighting</option>
+            </select>
+
+            <label for="background">Background:</label>
+            <select id="background">
+                <option value="Plain white background">Plain white background</option>
+                <option value="Cherry blossom trees">Cherry blossom trees</option>
+                <option value="Cyberpunk city">Cyberpunk city</option>
+                <option value="Japanese street at night">Japanese street at night</option>
+                <option value="Magical forest">Magical forest</option>
+                <option value="Victorian mansion interior">Victorian mansion interior</option>
+                <option value="Futuristic skyline">Futuristic skyline</option>
+                <option value="Floating island">Floating island</option>
+                <option value="Ancient ruins">Ancient ruins</option>
+                <option value="Space station">Space station</option>
+                <option value="Snowy mountain">Snowy mountain</option>
+                <option value="Sunset beach">Sunset beach</option>
+                <option value="Medieval castle">Medieval castle</option>
+                <option value="Urban rooftop">Urban rooftop</option>
+                <option value="Dreamy clouds">Dreamy clouds</option>
+                <option value="Underwater realm">Underwater realm</option>
+                <option value="Dystopian wasteland">Dystopian wasteland</option>
+                <option value="Library filled with floating books">Library with floating books</option>
+                <option value="Enchanted garden">Enchanted garden</option>
+                <option value="Fireworks festival">Fireworks festival</option>
+            </select>
+
+            <label for="clothing">Clothing:</label>
+            <select id="clothing">
+                <option value="Casual t-shirt">Casual t-shirt</option>
+                <option value="Elegant dress">Elegant dress</option>
+                <option value="Business suit">Business suit</option>
+                <option value="Hoodie">Hoodie</option>
+                <option value="Kimono">Kimono</option>
+                <option value="Leather jacket">Leather jacket</option>
+                <option value="School uniform">School uniform</option>
+                <option value="Gothic lolita dress">Gothic lolita dress</option>
+                <option value="Cyberpunk outfit">Cyberpunk outfit</option>
+                <option value="Medieval armor">Medieval armor</option>
+                <option value="Crop top">Crop top</option>
+                <option value="Blazer">Blazer</option>
+                <option value="Sweater">Sweater</option>
+                <option value="Tank top">Tank top</option>
+                <option value="Formal gown">Formal gown</option>
+                <option value="Military uniform">Military uniform</option>
+                <option value="Traditional robe">Traditional robe</option>
+                <option value="Streetwear">Streetwear</option>
+                <option value="Steampunk attire">Steampunk attire</option>
+                <option value="Futuristic bodysuit">Futuristic bodysuit</option>
+            </select>
+
+            <label for="clothing-color">Clothing Color:</label>
+            <select id="clothing-color">
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Purple">Purple</option>
+                <option value="Pink">Pink</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Orange">Orange</option>
+                <option value="Brown">Brown</option>
+                <option value="Gray">Gray</option>
+                <option value="Navy blue">Navy blue</option>
+                <option value="Crimson">Crimson</option>
+                <option value="Emerald">Emerald</option>
+                <option value="Golden">Golden</option>
+                <option value="Silver">Silver</option>
+                <option value="Turquoise">Turquoise</option>
+                <option value="Maroon">Maroon</option>
+                <option value="Pastel colors">Pastel colors</option>
+                <option value="Neon colors">Neon colors</option>
+            </select>
+
+            <label for="face-accessories">Face Accessories:</label>
+            <select id="face-accessories">
+                <option value="">None</option>
+                <option value="Glasses">Glasses</option>
+                <option value="Sunglasses">Sunglasses</option>
+                <option value="Eye patch">Eye patch</option>
+                <option value="Face mask">Face mask</option>
+                <option value="Nose piercing">Nose piercing</option>
+                <option value="Lip piercing">Lip piercing</option>
+                <option value="Eyebrow piercing">Eyebrow piercing</option>
+                <option value="Reading glasses">Reading glasses</option>
+                <option value="Safety goggles">Safety goggles</option>
+                <option value="Monocle">Monocle</option>
+                <option value="Cat-eye glasses">Cat-eye glasses</option>
+                <option value="Round glasses">Round glasses</option>
+                <option value="Aviator sunglasses">Aviator sunglasses</option>
+                <option value="Face paint">Face paint</option>
+                <option value="Tattoos on face">Tattoos on face</option>
+                <option value="Cyberpunk visor">Cyberpunk visor</option>
+                <option value="Gas mask">Gas mask</option>
+                <option value="Bandana over mouth">Bandana over mouth</option>
+                <option value="Ceremonial face markings">Ceremonial face markings</option>
+                <option value="Virtual reality headset">Virtual reality headset</option>
+            </select>
+
+            <label for="pose">Pose:</label>
+            <select id="pose">
+                <option value="Standing confidently">Standing confidently</option>
+                <option value="Sitting casually">Sitting casually</option>
+                <option value="Walking forward">Walking forward</option>
+                <option value="Running">Running</option>
+                <option value="Jumping">Jumping</option>
+                <option value="Crouching">Crouching</option>
+                <option value="Leaning against wall">Leaning against wall</option>
+                <option value="Arms crossed">Arms crossed</option>
+                <option value="Hand on hip">Hand on hip</option>
+                <option value="Pointing forward">Pointing forward</option>
+                <option value="Waving">Waving</option>
+                <option value="Meditating">Meditating</option>
+                <option value="Dancing">Dancing</option>
+                <option value="Fighting stance">Fighting stance</option>
+                <option value="Sleeping">Sleeping</option>
+                <option value="Reading">Reading</option>
+                <option value="Holding object">Holding object</option>
+                <option value="Looking over shoulder">Looking over shoulder</option>
+                <option value="Kneeling">Kneeling</option>
+                <option value="With gun">With gun</option>
+            </select>
+
+            <div class="gun-pose-container" id="gun-pose-container">
+                <label for="gun-pose">Gun Pose Type:</label>
+                <select id="gun-pose">
+                    <option value="">None</option>
+                    <option value="Drawing a gun">Drawing a gun</option>
+                    <option value="Holstered gun">Holstered gun</option>
+                    <option value="Aiming gun">Aiming gun</option>
+                    <option value="Holding gun at side">Holding gun at side</option>
+                    <option value="Two-handed gun grip">Two-handed gun grip</option>
+                    <option value="Gun pointed upward">Gun pointed upward</option>
+                    <option value="Gun pointed downward">Gun pointed downward</option>
+                    <option value="Dual wielding guns">Dual wielding guns</option>
+                    <option value="Reloading gun">Reloading gun</option>
+                    <option value="Gun on shoulder">Gun on shoulder</option>
+                </select>
+            </div>
+
+            <label for="effects">Effects:</label>
+            <select id="effects">
+                <option value="Soft blur">Soft blur</option>
+                <option value="Particle effects">Particle effects</option>
+                <option value="Lens flare">Lens flare</option>
+                <option value="Motion blur">Motion blur</option>
+                <option value="Depth of field">Depth of field</option>
+                <option value="Chromatic aberration">Chromatic aberration</option>
+                <option value="Film grain">Film grain</option>
+                <option value="Glitch effects">Glitch effects</option>
+                <option value="Holographic distortion">Holographic distortion</option>
+                <option value="Ethereal glow">Ethereal glow</option>
+            </select>
+
+            <button id="generate-prompt">Generate Prompt</button>
+        </div>
+
+        <div class="output">
+            <h2>Generated Prompt:</h2>
+            <p id="prompt-result">Your prompt will appear here...</p>
+            <div class="button-group">
+                <button id="copy-prompt">Copy to Clipboard</button>
+                <button id="clear-prompt">Clear</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Hair accessory visibility control
+        function toggleHairAccessory() {
+            const gender = document.getElementById("gender").value;
+            const hairAccessoryContainer = document.getElementById("hair-accessory-container");
+            
+            if (gender === "Woman" || gender === "Feminine-presenting") {
+                hairAccessoryContainer.classList.add("show");
+            } else {
+                hairAccessoryContainer.classList.remove("show");
+            }
+        }
+
+        // Gun pose visibility control
+        function toggleGunPose() {
+            const pose = document.getElementById("pose").value;
+            const gunPoseContainer = document.getElementById("gun-pose-container");
+            
+            if (pose === "With gun") {
+                gunPoseContainer.classList.add("show");
+            } else {
+                gunPoseContainer.classList.remove("show");
+            }
+        }
+
+        // Initialize visibility
+        toggleHairAccessory();
+        toggleGunPose();
+
+        // Add event listeners
+        document.getElementById("gender").addEventListener("change", toggleHairAccessory);
+        document.getElementById("pose").addEventListener("change", toggleGunPose);
+
+        // Generate prompt functionality
+        document.getElementById("generate-prompt").addEventListener("click", function() {
+            const artStyle = document.getElementById("art-style").value;
+            const age = document.getElementById("age").value;
+            const gender = document.getElementById("gender").value;
+            const hairStyle = document.getElementById("hair-style").value;
+            const hairColor = document.getElementById("hair-color").value;
+            const eyeColor = document.getElementById("eye-color").value;
+            const background = document.getElementById("background").value;
+            const clothing = document.getElementById("clothing").value;
+            const clothingColor = document.getElementById("clothing-color").value;
+            const faceAccessories = document.getElementById("face-accessories").value;
+            const mood = document.getElementById("mood").value;
+            const cameraAngle = document.getElementById("camera-angle").value;
+            const lighting = document.getElementById("lighting").value;
+            const effects = document.getElementById("effects").value;
+            const pose = document.getElementById("pose").value;
+            
+            let hairAccessory = "";
+            if (gender === "Woman" || gender === "Feminine-presenting") {
+                const accessoryValue = document.getElementById("hair-accessory").value;
+                if (accessoryValue) {
+                    hairAccessory = accessoryValue;
+                }
+            }
+
+            let gunPose = "";
+            if (pose === "With gun") {
+                const gunPoseValue = document.getElementById("gun-pose").value;
+                if (gunPoseValue) {
+                    gunPose = gunPoseValue;
+                }
+            }
+
+            let generatedPrompt = `${artStyle} art style, ${age} ${gender}, ${hairColor} ${hairStyle}, ${eyeColor} eyes`;
+            
+            if (hairAccessory) {
+                generatedPrompt += ` with ${hairAccessory}`;
+            }
+            
+            generatedPrompt += `, wearing ${clothingColor} ${clothing}`;
+            
+            if (faceAccessories) {
+                generatedPrompt += `, ${faceAccessories}`;
+            }
+            
+            generatedPrompt += `, expressing ${mood}`;
+            
+            if (gunPose) {
+                generatedPrompt += `, ${gunPose}`;
+            } else {
+                generatedPrompt += `, ${pose}`;
+            }
+            
+            generatedPrompt += `, captured in ${cameraAngle}, illuminated with ${lighting}, featuring ${effects} effects, with ${background}.`;
+
+            document.getElementById("prompt-result").textContent = generatedPrompt;
+        });
+
+        // Copy to Clipboard Functionality
+        document.getElementById("copy-prompt").addEventListener("click", function() {
+            const promptText = document.getElementById("prompt-result").textContent;
+            
+            if (promptText !== "Your prompt will appear here...") {
+                navigator.clipboard.writeText(promptText).then(() => {
+                    alert("Prompt copied to clipboard!");
+                }).catch(err => {
+                    console.error("Failed to copy: ", err);
+                    // Fallback for older browsers
+                    const textArea = document.createElement("textarea");
+                    textArea.value = promptText;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    alert("Prompt copied to clipboard!");
+                });
+            } else {
+                alert("Generate a prompt first before copying!");
+            }
+        });
+
+        // Clear prompt functionality
+        document.getElementById("clear-prompt").addEventListener("click", function() {
+            document.getElementById("prompt-result").textContent = "Your prompt will appear here...";
+        });
+    </script>
+</body>
+</html>
