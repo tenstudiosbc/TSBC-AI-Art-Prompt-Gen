@@ -1,0 +1,40 @@
+/* Form elements - inputs, selects, labels */
+label {
+    font-size: 1.1em;
+    margin-top: 10px;
+    color: var(--text-secondary);
+    display: block;
+}
+
+select, 
+input {
+    font-size: 1em;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: var(--border-radius);
+    margin-top: 5px;
+    background-color: var(--background-light);
+    color: var(--text-primary);
+    box-shadow: 0px 2px 5px var(--shadow-color);
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+}
+
+select:focus,
+input:focus {
+    outline: none;
+    box-shadow: 0px 4px 8px var(--shadow-color);
+}
+
+/* Conditional visibility containers */
+.hair-accessory-container,
+.gun-pose-container {
+    display: none;
+    width: 100%;
+}
+
+.hair-accessory-container.show,
+.gun-pose-container.show {
+    display: block;
+}
