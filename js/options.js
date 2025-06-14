@@ -42,7 +42,9 @@ export const optionsData = {
         "Twin tails",
         "Messy bun",
         "Bob cut",
-        "Undercut"
+        "Undercut",
+        "Loose Ponytail",
+        "Short Hair"
     ],
     
     hairColor: [
@@ -56,7 +58,8 @@ export const optionsData = {
         "Pink",
         "Purple",
         "Silver",
-        "White"
+        "White",
+        "Lavender"
     ],
     
     eyeColor: [
@@ -96,7 +99,10 @@ export const optionsData = {
         "Fierce",
         "Serene",
         "Playful",
-        "Determined"
+        "Determined",
+        "Flirty",
+        "Sad",
+        "Seductive"
     ],
     
     cameraAngle: [
@@ -131,7 +137,9 @@ export const optionsData = {
         "Ancient ruins",
         "Sunset beach",
         "Urban rooftop",
-        "Enchanted garden"
+        "Enchanted garden",
+        "Beachside House",
+        "Downtown Streets"
     ],
     
     clothing: [
@@ -144,7 +152,8 @@ export const optionsData = {
         "Leather jacket",
         "School uniform",
         "Cyberpunk outfit",
-        "Streetwear"
+        "Streetwear",
+        "Elegant Dress"
     ],
     
     clothingColor: [
@@ -192,7 +201,8 @@ export const optionsData = {
         "Floral hairpiece",
         "Ribbons",
         "Tiara",
-        "Cyberpunk hairpiece"
+        "Cyberpunk hairpiece",
+        "Bow"
     ],
     
     gunPose: [
