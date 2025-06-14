@@ -4,23 +4,13 @@ import { initializePromptGenerator } from './prompt-generator.js';
 import { initializeClipboard } from './clipboard.js';
 import { loadOptions } from './options.js';
 
-// New imports for enhanced functionality
-import { initializeTabs } from './tabs.js';
-import { initializeTemplates } from './templates.js';
-import { initializeHistory } from './history.js';
-import { initializeProgress } from './progress.js';
-import { initializeToast } from './toast.js';
-import { initializeAdvanced } from './advanced.js';
-
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎨 TSBC AI Art Prompt Maker v2.0.0 - Initializing...');
-    
-    // Load core functionality
     loadOptions();
     initializeVisibilityControls();
     initializePromptGenerator();
     initializeClipboard();
+<<<<<<< HEAD
     
     // Initialize new features
     initializeTabs();
@@ -49,3 +39,6 @@ function showWelcomeAnimation() {
         }, 100);
     }
 }
+=======
+});
+>>>>>>> parent of 70d534d (UI/UX overhaul and added advanced functionality for more options)
