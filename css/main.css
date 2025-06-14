@@ -77,3 +77,60 @@
 .toast.error { background: var(--danger-color); color: white; }
 .toast.warning { background: var(--warning-color); color: white; }
 .toast.info { background: var(--primary-color); color: white; }
+
+/* Favorites Panel */
+.favorites-panel {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.favorite-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal);
+}
+
+.favorite-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.favorite-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.favorite-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.favorite-preview {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.favorite-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}
+
+.empty-state i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
