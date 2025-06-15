@@ -125,7 +125,7 @@ const optionsData = {
         "Headband", "Hair clips", "Floral hairpiece", "Ribbons", "Tiara", "Cyberpunk hairpiece", "Bow", "Cat ears", "Devil horns", "Halo",
         "Butterfly clip", "Gemstone pin", "Feather decoration", "Star clip", "Mini top hat", "Scrunchie", "Pearl string", "Golden barrette",
         "Spiked accessory", "Braided beads", "Traditional pin", "Leaf crown", "Moon ornament", "Dragon pin", "Music note clip", "Candy-shaped clip",
-        "Spiderweb clip", "Rainbow hair clip", "Skull hairpin", "Little SSIA Insignia"
+        "Spiderweb clip", "Rainbow hair clip", "Skull hairpin", "Little SSIA Insignia", "Mage Hat"
     ],
 
     gunPose: [
