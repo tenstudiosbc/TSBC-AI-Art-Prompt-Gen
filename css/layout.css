@@ -260,7 +260,8 @@
 
 /* Templates and History Panels */
 .templates-panel,
-.history-panel {
+.history-panel,
+.settings-panel {
     background: var(--bg-card);
     border: 1px solid var(--border-primary);
     border-radius: var(--radius-lg);
@@ -270,7 +271,8 @@
 }
 
 .templates-panel h3,
-.history-panel h3 {
+.history-panel h3,
+.settings-panel h3 {
     color: var(--text-primary);
     margin-bottom: var(--spacing-lg);
     font-size: 1.125rem;

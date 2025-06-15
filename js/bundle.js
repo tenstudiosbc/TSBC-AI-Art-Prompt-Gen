@@ -250,6 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeToast();
     initializeAdvanced();
     initializeThemeSettings(); // <-- Add this line
+    initializeSettingsPanel(); // Add this line
     
     console.log('✨ Application initialized successfully!');
     
@@ -318,8 +319,6 @@ function initializeTabs() {
     // Theme tab: ensure correct tab is shown on load if needed
     // (optional: can be omitted if not needed)
 }
-
-// ...existing code...
 
 function switchTab(targetTab, tabButtons, tabContents) {
     // Remove active class from all buttons and contents
@@ -702,10 +701,14 @@ function initializeTemplates() {
 function toggleTemplatesPanel() {
     const templatesPanel = document.getElementById('templates-panel');
     const historyPanel = document.getElementById('history-panel');
-    
+    const settingsPanel = document.getElementById('settings-panel');
     // Hide history panel if open
     if (historyPanel) {
         historyPanel.style.display = 'none';
+    }
+    // Hide settings panel if open
+    if (settingsPanel) {
+        settingsPanel.style.display = 'none';
     }
     
     if (templatesPanel) {
@@ -808,10 +811,14 @@ function addToHistory(prompt, settings = {}) {
 function toggleHistoryPanel() {
     const historyPanel = document.getElementById('history-panel');
     const templatesPanel = document.getElementById('templates-panel');
-    
+    const settingsPanel = document.getElementById('settings-panel');
     // Hide templates panel if open
     if (templatesPanel) {
         templatesPanel.style.display = 'none';
+    }
+    // Hide settings panel if open
+    if (settingsPanel) {
+        settingsPanel.style.display = 'none';
     }
     
     if (historyPanel) {
@@ -1464,3 +1471,30 @@ function setTheme(theme) {
     `;
     document.head.appendChild(style);
 })();
+
+// Add this function near other panel toggles
+function initializeSettingsPanel() {
+    const settingsBtn = document.getElementById('settings-btn');
+    const settingsPanel = document.getElementById('settings-panel');
+    const templatesPanel = document.getElementById('templates-panel');
+    const historyPanel = document.getElementById('history-panel');
+    if (!settingsBtn || !settingsPanel) return;
+
+    settingsBtn.addEventListener('click', function() {
+        // Hide other panels
+        if (templatesPanel) templatesPanel.style.display = 'none';
+        if (historyPanel) historyPanel.style.display = 'none';
+
+        const isVisible = settingsPanel.style.display !== 'none';
+        settingsPanel.style.display = isVisible ? 'none' : 'block';
+        if (!isVisible) {
+            settingsPanel.style.opacity = '0';
+            settingsPanel.style.transform = 'translateY(-10px)';
+            setTimeout(() => {
+                settingsPanel.style.transition = 'all 0.3s ease';
+                settingsPanel.style.opacity = '1';
+                settingsPanel.style.transform = 'translateY(0)';
+            }, 50);
+        }
+    });
+}

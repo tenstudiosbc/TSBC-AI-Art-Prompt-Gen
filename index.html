@@ -30,8 +30,12 @@
             <button id="history-btn" class="action-btn">
                 <i class="fas fa-history"></i> History
             </button>
+            <button id="settings-btn" class="action-btn">
+                <i class="fas fa-sliders-h"></i> Web Settings
+            </button>
         </div>
-    </header>    <main class="app-container">
+    </header>
+    <main class="app-container">
         <!-- Navigation Tabs -->
         <nav class="tab-navigation">
             <button class="tab-btn active" data-tab="basic">
@@ -46,9 +50,7 @@
             <button class="tab-btn" data-tab="advanced">
                 <i class="fas fa-cogs"></i> Advanced
             </button>
-            <button class="tab-btn" data-tab="settings">
-                <i class="fas fa-sliders-h"></i> Web Settings
-            </button>
+            <!-- Removed Web Settings tab button -->
         </nav>
 
         <!-- Progress Bar -->
@@ -251,43 +253,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Web Settings Tab -->
-                <div class="tab-content" id="settings-tab">
-                    <div class="section-card">
-                        <h3><i class="fas fa-sliders-h"></i> Theme Settings</h3>
-                        <div class="form-grid">
-                            <div class="form-group full-width">
-                                <label for="theme-select">Theme:</label>
-                                <select id="theme-select">
-                                    <option value="default">Default</option>
-                                    <option value="dark">Dark</option>
-                                    <option value="sunset">Sunset Dusk</option>
-                                </select>
-                            </div>
-                        </div>
-                        <p style="margin-top:1rem; color:var(--text-muted); font-size:0.9em;">
-                            Change the look and feel of the app instantly. All themes are optimized for readability.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Generation Controls -->
-                <div class="generation-controls">
-                    <div class="control-group">
-                        <button id="generate-prompt" class="primary-btn">
-                            <i class="fas fa-wand-magic-sparkles"></i> Generate Prompt
-                        </button>
-                        <button id="random-fill" class="secondary-btn">
-                            <i class="fas fa-shuffle"></i> Random Fill
-                        </button>
-                        <button id="clear-all" class="secondary-btn">
-                            <i class="fas fa-eraser"></i> Clear All
-                        </button>
-                    </div>
-                </div>
             </div>
-
             <!-- Output Section -->
             <div class="output-container">
                 <div class="output-card">
@@ -339,6 +305,40 @@
                 <!-- History Panel -->
                 <div class="history-panel" id="history-panel" style="display: none;">
                     <h3><i class="fas fa-history"></i> Recent Prompts</h3>
+                    <div class="history-list" id="history-list">
+                        <!-- History will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Web Settings Panel (new floating panel) -->
+                <div class="settings-panel" id="settings-panel" style="display: none;">
+                    <h3><i class="fas fa-sliders-h"></i> Theme Settings</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="theme-select">Theme:</label>
+                            <select id="theme-select">
+                                <option value="default">Default</option>
+                                <option value="dark">Dark</option>
+                                <option value="sunset">Sunset Dusk</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem; color:var(--text-muted); font-size:0.9em;">
+                        Change the look and feel of the app instantly. All themes are optimized for readability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/bundle.js"></script>
+    
+    <!-- Notification Toast -->
+    <div id="toast-notification" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Action completed!</span>
+    </div>
+</body>
+</html>
                     <div class="history-list" id="history-list">
                         <!-- History will be populated by JavaScript -->
                     </div>
