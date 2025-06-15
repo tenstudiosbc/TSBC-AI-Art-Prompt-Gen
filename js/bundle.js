@@ -319,8 +319,6 @@ function initializeTabs() {
     // (optional: can be omitted if not needed)
 }
 
-// ...existing code...
-
 function switchTab(targetTab, tabButtons, tabContents) {
     // Remove active class from all buttons and contents
     tabButtons.forEach(btn => btn.classList.remove('active'));
@@ -1388,78 +1386,109 @@ function initializeThemeSettings() {
 function setTheme(theme) {
     const root = document.documentElement;
     // Remove all theme classes
-    root.classList.remove('theme-dark', 'theme-sunset');
+    root.classList.remove('theme-dark', 'theme-sunset', 'theme-light', 'theme-green-tea');
     switch (theme) {
+        case 'light':
+            root.classList.add('theme-light');
+            break;
         case 'dark':
             root.classList.add('theme-dark');
             break;
         case 'sunset':
             root.classList.add('theme-sunset');
             break;
+        case 'green-tea':
+            root.classList.add('theme-green-tea');
+            break;
         default:
-            // Default: no extra class
+            root.classList.add('theme-light'); // Set light as default
             break;
     }
 }
 
-// Add theme CSS variables to <head> if not present
+// Update theme styles
 (function injectThemeStyles() {
     if (document.getElementById('tsbc-theme-styles')) return;
     const style = document.createElement('style');
     style.id = 'tsbc-theme-styles';
     style.textContent = `
-    /* Default theme: no override, uses base variables */
+    /* Light Theme (Default) */
+    :root, .theme-light {
+        --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        --bg-card: #ffffff;
+        --bg-card-hover: #f8fafc;
+        --bg-secondary: #f1f5f9;
+        --bg-glass: rgba(255, 255, 255, 0.9);
+        --text-primary: #1e293b;
+        --text-secondary: #334155;
+        --text-muted: #64748b;
+        --primary-color: #4f8cff;
+        --secondary-color: #6366f1;
+        --border-primary: #e2e8f0;
+        --border-secondary: #f1f5f9;
+        --shadow-glow: 0 0 16px #4f8cff22;
+        --shadow-xl: 0 4px 32px #0001;
+    }
 
     /* Dark Theme */
     .theme-dark {
-        --bg-card: #23272f;
-        --bg-card-hover: #2c313a;
-        --bg-secondary: #181b20;
-        --bg-glass: rgba(30,34,40,0.7);
-        --text-primary: #fff;
-        --text-secondary: #e0e0e0;
-        --text-muted: #b0b0b0;
-        --primary-color: #4f8cff;
-        --secondary-color: #a770ef;
-        --border-primary: #3a3f47;
-        --border-secondary: #23272f;
-        --danger-color: #ef4444;
-        --success-color: #22c55e;
-        --warning-color: #f59e42;
-        --shadow-glow: 0 0 16px #4f8cff44;
-        --shadow-xl: 0 4px 32px #000a;
-    }
-    .theme-dark .section-card,
-    .theme-dark .output-card,
-    .theme-dark .templates-panel,
-    .theme-dark .history-panel {
-        box-shadow: none;
+        --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        --bg-card: #1e293b;
+        --bg-card-hover: #334155;
+        --bg-secondary: #0f172a;
+        --bg-glass: rgba(15, 23, 42, 0.9);
+        --text-primary: #f8fafc;
+        --text-secondary: #e2e8f0;
+        --text-muted: #94a3b8;
     }
 
-    /* Sunset Dusk Theme */
+    /* Sunset Theme */
     .theme-sunset {
+        --bg-gradient: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%);
         --bg-card: #fff7f0;
         --bg-card-hover: #ffe0c7;
         --bg-secondary: #ffe6d5;
-        --bg-glass: rgba(255, 183, 94, 0.15);
-        --text-primary: #3b1f0b;
-        --text-secondary: #7a3e1d;
-        --text-muted: #b97c4b;
-        --primary-color: #ff7e5f;
-        --secondary-color: #feb47b;
-        --border-primary: #ffb97b;
-        --border-secondary: #ffd6b0;
-        --danger-color: #e85d04;
-        --success-color: #43aa8b;
-        --warning-color: #f9c74f;
-        --shadow-glow: 0 0 16px #ff7e5f44;
-        --shadow-xl: 0 4px 32px #ffb47b44;
+        --bg-glass: rgba(255, 247, 237, 0.9);
+        --text-primary: #431407;
+        --text-secondary: #7c2d12;
+        --text-muted: #9a3412;
+        --primary-color: #f97316;
+        --secondary-color: #fb923c;
+        --border-primary: #fed7aa;
+        --border-secondary: #ffedd5;
+        --shadow-glow: 0 0 16px #f9731622;
     }
-    .theme-sunset .section-card,
-    .theme-sunset .output-card,
-    .theme-sunset .templates-panel,
-    .theme-sunset .history-panel {
-        box-shadow: none;
+
+    /* Green Tea Theme */
+    .theme-green-tea {
+        --bg-gradient: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        --bg-card: #ffffff;
+        --bg-card-hover: #f0fdf4;
+        --bg-secondary: #dcfce7;
+        --bg-glass: rgba(240, 253, 244, 0.9);
+        --text-primary: #14532d;
+        --text-secondary: #166534;
+        --text-muted: #15803d;
+        --primary-color: #22c55e;
+        --secondary-color: #4ade80;
+        --border-primary: #bbf7d0;
+        --border-secondary: #dcfce7;
+        --shadow-glow: 0 0 16px #22c55e22;
+    }
+
+    /* Common progress bar styles - not affected by theme */
+    .progress-bar {
+        background: rgba(0, 0, 0, 0.1) !important;
+        border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .progress-fill {
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
+    }
+
+    /* Apply background gradient to body based on theme */
+    body {
+        background: var(--bg-gradient);
     }
     `;
     document.head.appendChild(style);
