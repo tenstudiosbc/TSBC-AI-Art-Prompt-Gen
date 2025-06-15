@@ -53,6 +53,7 @@ function getFormData() {
         hairColor: document.getElementById("hair-color").value,
         eyeColor: document.getElementById("eye-color").value,
         bodyType: document.getElementById("body-type").value,
+        personality: document.getElementById("personality").value,
         
         // Appearance details
         background: document.getElementById("background").value,
@@ -103,9 +104,11 @@ function buildPrompt(data) {
     } else if (data.age) {
         characterDesc.push(data.age);
     } else if (data.gender) {
-        characterDesc.push(data.gender);
+        characterDesc.push(data.gender);        
     }
+    if (data.personality) characterDesc.push(`with a ${data.personality} personality`);
     
+    // Body type and features
     if (data.bodyType) characterDesc.push(`${data.bodyType} body`);
     
     // Hair description
