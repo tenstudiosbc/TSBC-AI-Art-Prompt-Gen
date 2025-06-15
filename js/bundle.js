@@ -104,6 +104,11 @@ const optionsData = {
         "Ivory", "Emerald", "Midnight purple"
     ],
 
+    Personality: [
+        "",
+
+    ]
+
     faceAccessories: [
         "",
         "Glasses", "Sunglasses", "Eye patch", "Face mask", "Reading glasses", "Round glasses", "Cyberpunk visor", "Monocle", "Bandage across nose",
