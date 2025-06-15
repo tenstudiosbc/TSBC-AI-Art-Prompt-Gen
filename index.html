@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced AI Art Prompt Generator with rich customization options and intelligent prompt building.">
+    <title>TSBC AI Art Prompt Maker - Advanced</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <i class="fas fa-magic"></i>
+                <h1>TSBC AI Art Prompt Maker</h1>
+            </div>
+            <p class="tagline">Advanced AI prompt generation with intelligent customization</p>
+            <div class="version-badge">Version 2.0.2</div>
+        </div>
+        <div class="header-actions">
+            <button id="random-generate" class="action-btn">
+                <i class="fas fa-dice"></i> Random Generate
+            </button>
+            <button id="templates-btn" class="action-btn">
+                <i class="fas fa-bookmark"></i> Templates
+            </button>
+            <button id="history-btn" class="action-btn">
+                <i class="fas fa-history"></i> History
+            </button>
+        </div>
+    </header>    <main class="app-container">
+        <!-- Navigation Tabs -->
+        <nav class="tab-navigation">
+            <button class="tab-btn active" data-tab="basic">
+                <i class="fas fa-user"></i> Character
+            </button>
+            <button class="tab-btn" data-tab="style">
+                <i class="fas fa-palette"></i> Style & Effects
+            </button>
+            <button class="tab-btn" data-tab="scene">
+                <i class="fas fa-image"></i> Scene & Composition
+            </button>
+            <button class="tab-btn" data-tab="advanced">
+                <i class="fas fa-cogs"></i> Advanced
+            </button>
+            <button class="tab-btn" data-tab="settings">
+                <i class="fas fa-sliders-h"></i> Web Settings
+            </button>
+        </nav>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <span class="progress-text" id="progress-text">0% Complete</span>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Form Sections -->
+            <div class="form-container">
+                <!-- Basic Character Tab -->
+                <div class="tab-content active" id="basic-tab">
+                    <div class="section-card">
+                        <h3><i class="fas fa-user-circle"></i> Character Basics</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="age">Age:</label>
+                                <select id="age"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender:</label>
+                                <select id="gender"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="body-type">Body Type:</label>
+                                <select id="body-type"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="personality">Personality:</label>
+                                <select id="personality"></select>
+                            </div>    
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><i class="fas fa-cut"></i> Hair & Features</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="hair-style">Hair Style:</label>
+                                <select id="hair-style"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="hair-color">Hair Color:</label>
+                                <select id="hair-color"></select>
+                            </div>
+                            <div class="form-group hair-accessory-container" id="hair-accessory-container">
+                                <label for="hair-accessory">Hair Accessory:</label>
+                                <select id="hair-accessory"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="eye-color">Eye Color:</label>
+                                <select id="eye-color"></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><i class="fas fa-tshirt"></i> Clothing & Accessories</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="clothing">Clothing:</label>
+                                <select id="clothing"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="clothing-color">Clothing Color:</label>
+                                <select id="clothing-color"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="face-accessories">Face Accessories:</label>
+                                <select id="face-accessories"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Style & Effects Tab -->
+                <div class="tab-content" id="style-tab">
+                    <div class="section-card">
+                        <h3><i class="fas fa-brush"></i> Art Style</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="art-style">Art Style:</label>
+                                <select id="art-style"></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><i class="fas fa-lightbulb"></i> Lighting & Effects</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="lighting">Lighting:</label>
+                                <select id="lighting"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="effects">Effects:</label>
+                                <select id="effects"></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><i class="fas fa-smile"></i> Mood & Expression</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="mood">Mood:</label>
+                                <select id="mood"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene & Composition Tab -->
+                <div class="tab-content" id="scene-tab">
+                    <div class="section-card">
+                        <h3><i class="fas fa-camera"></i> Camera & Composition</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="camera-angle">Camera Angle:</label>
+                                <select id="camera-angle"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="background">Background:</label>
+                                <select id="background"></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><i class="fas fa-running"></i> Pose & Action</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="pose">Pose:</label>
+                                <select id="pose"></select>
+                            </div>
+                            <div class="form-group gun-pose-container" id="gun-pose-container">
+                                <label for="gun-pose">Gun Pose Type:</label>
+                                <select id="gun-pose"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Tab -->
+                <div class="tab-content" id="advanced-tab">
+                    <div class="section-card">
+                        <h3><i class="fas fa-sliders-h"></i> Custom Parameters</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="custom-prefix">Custom Prefix:</label>
+                                <input type="text" id="custom-prefix" placeholder="Add custom text at the beginning...">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="custom-suffix">Custom Suffix:</label>
+                                <input type="text" id="custom-suffix" placeholder="Add custom text at the end...">
+                            </div>
+                            <div class="form-group">
+                                <label for="quality-tags">Quality Tags:</label>
+                                <select id="quality-tags">
+                                    <option value="">None</option>
+                                    <option value="masterpiece, best quality">High Quality</option>
+                                    <option value="masterpiece, best quality, ultra detailed">Ultra Quality</option>
+                                    <option value="masterpiece, best quality, ultra detailed, 4k, 8k">Premium Quality</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="negative-prompt">Negative Prompt:</label>
+                                <textarea id="negative-prompt" placeholder="Things to avoid in the image..." rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><i class="fas fa-magic"></i> AI Model Settings</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="aspect-ratio">Aspect Ratio:</label>
+                                <select id="aspect-ratio">
+                                    <option value="">Default</option>
+                                    <option value="1:1">Square (1:1)</option>
+                                    <option value="4:3">Standard (4:3)</option>
+                                    <option value="16:9">Widescreen (16:9)</option>
+                                    <option value="9:16">Portrait (9:16)</option>
+                                    <option value="3:4">Portrait (3:4)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="model-style">Model Style:</label>
+                                <select id="model-style">
+                                    <option value="">Default</option>
+                                    <option value="--style raw">Raw</option>
+                                    <option value="--style expressive">Expressive</option>
+                                    <option value="--style cute">Cute</option>
+                                    <option value="--style scenic">Scenic</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Settings Tab -->
+                <div class="tab-content" id="settings-tab">
+                    <div class="section-card">
+                        <h3><i class="fas fa-sliders-h"></i> Theme Settings</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="theme-select">Theme:</label>
+                                <select id="theme-select">
+                                    <option value="default">Default</option>
+                                    <option value="dark">Dark</option>
+                                    <option value="sunset">Sunset Dusk</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p style="margin-top:1rem; color:var(--text-muted); font-size:0.9em;">
+                            Change the look and feel of the app instantly. All themes are optimized for readability.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Generation Controls -->
+                <div class="generation-controls">
+                    <div class="control-group">
+                        <button id="generate-prompt" class="primary-btn">
+                            <i class="fas fa-wand-magic-sparkles"></i> Generate Prompt
+                        </button>
+                        <button id="random-fill" class="secondary-btn">
+                            <i class="fas fa-shuffle"></i> Random Fill
+                        </button>
+                        <button id="clear-all" class="secondary-btn">
+                            <i class="fas fa-eraser"></i> Clear All
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Section -->
+            <div class="output-container">
+                <div class="output-card">
+                    <div class="output-header">
+                        <h2><i class="fas fa-file-text"></i> Generated Prompt</h2>
+                        <div class="output-stats">
+                            <span class="char-count" id="char-count">0 characters</span>
+                        </div>
+                    </div>
+                    
+                    <div class="prompt-display">
+                        <div class="prompt-content" id="prompt-result">
+                            Your customized AI art prompt will appear here...
+                        </div>
+                    </div>
+
+                    <div class="negative-display" id="negative-display" style="display: none;">
+                        <h4>Negative Prompt:</h4>
+                        <div class="negative-content" id="negative-result"></div>
+                    </div>
+
+                    <div class="output-actions">
+                        <button id="copy-prompt" class="action-btn">
+                            <i class="fas fa-copy"></i> Copy Prompt
+                        </button>
+                        <button id="copy-negative" class="action-btn" style="display: none;">
+                            <i class="fas fa-copy"></i> Copy Negative
+                        </button>
+                        <button id="save-favorite" class="action-btn">
+                            <i class="fas fa-heart"></i> Save Favorite
+                        </button>
+                        <button id="export-json" class="action-btn">
+                            <i class="fas fa-download"></i> Export JSON
+                        </button>
+                        <button id="clear-prompt" class="action-btn danger">
+                            <i class="fas fa-trash"></i> Clear
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Templates Panel -->
+                <div class="templates-panel" id="templates-panel" style="display: none;">
+                    <h3><i class="fas fa-bookmark"></i> Quick Templates</h3>
+                    <div class="templates-grid" id="templates-grid">
+                        <!-- Templates will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- History Panel -->
+                <div class="history-panel" id="history-panel" style="display: none;">
+                    <h3><i class="fas fa-history"></i> Recent Prompts</h3>
+                    <div class="history-list" id="history-list">
+                        <!-- History will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>    <script src="js/bundle.js"></script>
+    
+    <!-- Notification Toast -->
+    <div id="toast-notification" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Action completed!</span>
+    </div>
+</body>
+</html>
