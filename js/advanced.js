@@ -104,7 +104,7 @@ function exportSettings() {
         metadata: {
             generator: 'TSBC AI Art Prompt Maker v2.0',
             timestamp: new Date().toISOString(),
-            version: '2.0.0'
+            version: '2.0.2'
         },
         settings: formData,
         generated: {
