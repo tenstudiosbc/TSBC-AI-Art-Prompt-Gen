@@ -52,8 +52,9 @@ function getFormData() {
         hairStyle: document.getElementById("hair-style").value,
         hairColor: document.getElementById("hair-color").value,
         eyeColor: document.getElementById("eye-color").value,
-        bodyType: document.getElementById("body-type").value,
         personality: document.getElementById("personality").value,
+        bodyType: document.getElementById("body-type").value,
+        
         
         // Appearance details
         background: document.getElementById("background").value,
