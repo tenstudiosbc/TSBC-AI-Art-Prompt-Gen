@@ -107,9 +107,12 @@ function buildPrompt(data) {
     } else if (data.gender) {
         characterDesc.push(data.gender);                
     }
-    if (data.personality) characterDesc.push(`with a ${data.personality} personality`);
     
-       
+    // Core Character Personality
+    if (data.personality) {
+        characterDesc.push(`with a ${data.personality} personality`);
+    }
+         
     // Body type and features
     if (data.bodyType) characterDesc.push(`${data.bodyType} body`);
     
