@@ -105,13 +105,11 @@ function buildPrompt(data) {
     } else if (data.age) {
         characterDesc.push(data.age);
     } else if (data.gender) {
-        characterDesc.push(data.gender);                
+        characterDesc.push(data.gender); 
+    } else if (data.personality) {
+        characterDesc.push(data.personality);    
     }
     
-    // Core Character Personality
-    if (data.personality) {
-        characterDesc.push(`with a ${data.personality} personality`);
-    }
          
     // Body type and features
     if (data.bodyType) characterDesc.push(`${data.bodyType} body`);
