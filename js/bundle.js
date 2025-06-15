@@ -107,7 +107,7 @@ const optionsData = {
     Personality: [
         "",
 
-    ]
+    ],
 
     faceAccessories: [
         "",
