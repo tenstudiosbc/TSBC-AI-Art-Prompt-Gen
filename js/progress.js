@@ -1,44 +1,44 @@
 // Progress tracking for form completion
 export function initializeProgress() {
     const formElements = document.querySelectorAll('select, input[type="text"], textarea');
+    const debouncedUpdate = debounce(updateProgress, 250);
     
     formElements.forEach(element => {
-        element.addEventListener('change', updateProgress);
-        element.addEventListener('input', updateProgress);
+        element.addEventListener('change', debouncedUpdate);
+        element.addEventListener('input', debouncedUpdate);
     });
     
     // Initial progress calculation
     updateProgress();
-    
-    // Make updateProgress globally available
-    window.updateProgress = updateProgress;
 }
 
 function updateProgress() {
-    const formElements = document.querySelectorAll('select, input[type="text"], textarea');
-    const totalFields = formElements.length;
-    let filledFields = 0;
-    
-    formElements.forEach(element => {
-        if (element.value && element.value.trim() !== '') {
-            filledFields++;
-        }
-    });
-    
-    const percentage = Math.round((filledFields / totalFields) * 100);
-    
-    // Update progress bar
     const progressFill = document.getElementById('progress-fill');
     const progressText = document.getElementById('progress-text');
-    
-    if (progressFill) {
+    if (!progressFill || !progressText) return;
+
+    // Use RequestAnimationFrame for smooth updates
+    requestAnimationFrame(() => {
+        const formElements = document.querySelectorAll('select, input[type="text"], textarea');
+        const totalFields = formElements.length;
+        const filledFields = Array.from(formElements).filter(el => el.value.trim()).length;
+        const percentage = Math.round((filledFields / totalFields) * 100);
+        
         progressFill.style.width = `${percentage}%`;
-    }
-    
-    if (progressText) {
         progressText.textContent = `${percentage}% Complete`;
         
-        // Add completion message
+        // Update text color based on completion
+        if (percentage === 100) {
+            progressText.textContent = '🎉 All fields completed!';
+            progressText.style.color = 'var(--success-color)';
+        } else if (percentage >= 75) {
+            progressText.textContent = `${percentage}% Complete - Almost there!`;
+            progressText.style.color = 'var(--warning-color)';
+        } else {
+            progressText.style.color = 'var(--text-muted)';
+        }
+    });
+}
         if (percentage === 100) {
             progressText.textContent = '🎉 All fields completed!';
             progressText.style.color = 'var(--success-color)';
