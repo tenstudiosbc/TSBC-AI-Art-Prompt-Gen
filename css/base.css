@@ -69,6 +69,12 @@ body {
     --transition-fast: 0.15s ease;
     --transition-normal: 0.25s ease;
     --transition-slow: 0.4s ease;
+    
+    /* Progress Bar Colors (Theme Independent) */
+    --progress-bg: rgba(0, 0, 0, 0.1);
+    --progress-border: rgba(0, 0, 0, 0.2);
+    --progress-fill-start: #6366f1;
+    --progress-fill-end: #8b5cf6;
 }
 
 /* Scrollbar Styling */
