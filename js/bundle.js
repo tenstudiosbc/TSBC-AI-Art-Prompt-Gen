@@ -105,7 +105,7 @@ const optionsData = {
     ],
 
     Personality: [
-        "",
+        "", "Friendly", "Shy", "Outgoing", "Introverted", "Extroverted", "Sarcastic", "Optimistic", "Pessimistic", "Adventurous",
 
     ],
 
