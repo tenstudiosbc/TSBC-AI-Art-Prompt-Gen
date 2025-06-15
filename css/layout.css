@@ -367,8 +367,6 @@
     transform: translateX(0);
 }
 
-/* All backgrounds, borders, and text colors use CSS variables for theme switching */
-
 /* Responsive Design */
 @media (max-width: 1024px) {
     .content-wrapper {

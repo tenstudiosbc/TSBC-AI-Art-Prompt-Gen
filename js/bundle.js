@@ -249,8 +249,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeProgress();
     initializeToast();
     initializeAdvanced();
+<<<<<<< HEAD
     initializeThemeSettings(); // <-- Add this line
     initializeSettingsPanel(); // Add this line
+=======
+>>>>>>> parent of 2e31ed2 (theme updates)
     
     console.log('✨ Application initialized successfully!');
     
@@ -315,9 +318,6 @@ function initializeTabs() {
             switchTab(targetTab, tabButtons, tabContents);
         });
     });
-
-    // Theme tab: ensure correct tab is shown on load if needed
-    // (optional: can be omitted if not needed)
 }
 
 function switchTab(targetTab, tabButtons, tabContents) {
@@ -341,18 +341,6 @@ function switchTab(targetTab, tabButtons, tabContents) {
             activeContent.style.transition = 'all 0.3s ease';
             activeContent.style.opacity = '1';
             activeContent.style.transform = 'translateY(0)';
-        }, 50);
-    }
-    
-    // Add: scroll to top of form on tab switch for better UX
-    if (activeContent) {
-        // ...existing code...
-        setTimeout(() => {
-            // ...existing code...
-            // Scroll to top of form container if present
-            if (activeContent.closest('.form-container')) {
-                activeContent.closest('.form-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
         }, 50);
     }
 }
@@ -1375,6 +1363,7 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+<<<<<<< HEAD
 
 // Theme switching functionality
 function initializeThemeSettings() {
@@ -1498,3 +1487,5 @@ function initializeSettingsPanel() {
         }
     });
 }
+=======
+>>>>>>> parent of 2e31ed2 (theme updates)
