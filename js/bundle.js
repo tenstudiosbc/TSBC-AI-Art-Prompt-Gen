@@ -109,7 +109,8 @@ const optionsData = {
         "Glasses", "Sunglasses", "Eye patch", "Face mask", "Reading glasses", "Round glasses", "Cyberpunk visor", "Monocle", "Bandage across nose",
         "Transparent mask", "VR goggles", "High-tech scouter", "Face tattoo", "Decorative gems", "Tribal face paint", "Makeup tear streak",
         "Steampunk goggles", "Breathing apparatus", "AR glasses", "Crystal eyepiece", "Glowing contact lens", "Golden mask", "Half-face mask",
-        "Futuristic faceplate", "Face barcode", "Ear-to-ear headset", "Dragon mark", "Forehead gem", "Visor with UI", "Ear Comms"
+        "Futuristic faceplate", "Face barcode", "Ear-to-ear headset", "Dragon mark", "Forehead gem", "Visor with UI", "Ear Comms", "Face shield",
+        "Fake beard"
     ],
 
     pose: [
@@ -117,7 +118,7 @@ const optionsData = {
         "Standing confidently", "Sitting casually", "Walking forward", "Arms crossed", "Hand on hip", "Fighting stance", "Dancing", "Looking over shoulder",
         "With gun", "Kneeling", "Leaning on wall", "Running", "Jumping", "Lying down", "Peace sign", "Holding object", "Hands in pockets",
         "Casting spell", "Floating", "Back turned", "Kicking", "Stretching", "Singing", "Holding hands out", "Protective stance", "Hugging something",
-        "Martial arts stance", "Crouching", "Pointing", "Eating", "Sleeping"
+        "Martial arts stance", "Crouching", "Pointing", "Eating", "Sleeping", "Sitting cross-legged", "Reaching out", "Holding chin thoughtfully",
     ],
 
     hairAccessory: [
@@ -125,7 +126,8 @@ const optionsData = {
         "Headband", "Hair clips", "Floral hairpiece", "Ribbons", "Tiara", "Cyberpunk hairpiece", "Bow", "Cat ears", "Devil horns", "Halo",
         "Butterfly clip", "Gemstone pin", "Feather decoration", "Star clip", "Mini top hat", "Scrunchie", "Pearl string", "Golden barrette",
         "Spiked accessory", "Braided beads", "Traditional pin", "Leaf crown", "Moon ornament", "Dragon pin", "Music note clip", "Candy-shaped clip",
-        "Spiderweb clip", "Rainbow hair clip", "Skull hairpin", "Little SSIA Insignia", "Mage Hat"
+        "Spiderweb clip", "Rainbow hair clip", "Skull hairpin", "Little SSIA Insignia", "Mage Hat", "Flower crown", "Hairband with bells",
+        "Hairband with charms", "Hairband with feathers", "Hairband with pearls", "Insignia hairpin", "Hairband with gems", "Hairband with ribbons"
     ],
 
     gunPose: [
