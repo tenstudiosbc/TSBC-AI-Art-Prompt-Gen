@@ -104,7 +104,7 @@ const optionsData = {
         "Ivory", "Emerald", "Midnight purple"
     ],
 
-    Personality: [
+    personality: [
         "", "Friendly", "Shy", "Outgoing", "Introverted", "Extroverted", "Sarcastic", "Optimistic", "Pessimistic", "Adventurous",
 
     ],
