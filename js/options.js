@@ -23,6 +23,11 @@ export const optionsData = {
         "Cybernetic androgyny", "Princess-knight fusion", "Witch form", "Goddess form"
     ],
 
+    personality: [
+        "", "Friendly", "Shy", "Outgoing", "Introverted", "Extroverted", "Sarcastic", "Optimistic", "Pessimistic", "Adventurous",
+
+    ],
+
     hairStyle: [
         "",
         "Long wavy hair", "Short spiky hair", "Medium-length layered hair", "Braided hair", "Pixie cut", "Tied ponytail", "Twin tails", "Messy bun",

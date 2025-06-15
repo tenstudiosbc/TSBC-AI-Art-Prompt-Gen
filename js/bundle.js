@@ -27,6 +27,11 @@ const optionsData = {
         "Cybernetic androgyny", "Princess-knight fusion", "Witch form", "Goddess form"
     ],
 
+    personality: [
+        "", "Friendly", "Shy", "Outgoing", "Introverted", "Extroverted", "Sarcastic", "Optimistic", "Pessimistic", "Adventurous",
+
+    ],
+
     hairStyle: [
         "",
         "Long wavy hair", "Short spiky hair", "Medium-length layered hair", "Braided hair", "Pixie cut", "Tied ponytail", "Twin tails", "Messy bun",
@@ -102,11 +107,6 @@ const optionsData = {
         "Black", "White", "Red", "Blue", "Green", "Purple", "Pink", "Navy blue", "Golden", "Silver", "Turquoise", "Lavender", "Brown", "Dark grey",
         "Light grey", "Beige", "Coral", "Maroon", "Pastel blue", "Pastel pink", "Olive green", "Orange", "Crimson", "Sky blue", "Teal", "Neon yellow",
         "Ivory", "Emerald", "Midnight purple"
-    ],
-
-    personality: [
-        "", "Friendly", "Shy", "Outgoing", "Introverted", "Extroverted", "Sarcastic", "Optimistic", "Pessimistic", "Adventurous",
-
     ],
 
     faceAccessories: [
