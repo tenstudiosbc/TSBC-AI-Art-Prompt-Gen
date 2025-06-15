@@ -46,6 +46,9 @@
             <button class="tab-btn" data-tab="advanced">
                 <i class="fas fa-cogs"></i> Advanced
             </button>
+            <button class="tab-btn" data-tab="settings">
+                <i class="fas fa-sliders-h"></i> Web Settings
+            </button>
         </nav>
 
         <!-- Progress Bar -->
@@ -246,6 +249,26 @@
                                 </select>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Web Settings Tab -->
+                <div class="tab-content" id="settings-tab">
+                    <div class="section-card">
+                        <h3><i class="fas fa-sliders-h"></i> Theme Settings</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="theme-select">Theme:</label>
+                                <select id="theme-select">
+                                    <option value="default">Default</option>
+                                    <option value="dark">Dark</option>
+                                    <option value="sunset">Sunset Dusk</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p style="margin-top:1rem; color:var(--text-muted); font-size:0.9em;">
+                            Change the look and feel of the app instantly. All themes are optimized for readability.
+                        </p>
                     </div>
                 </div>
 

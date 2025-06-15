@@ -249,6 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeProgress();
     initializeToast();
     initializeAdvanced();
+    initializeThemeSettings(); // <-- Add this line
     
     console.log('✨ Application initialized successfully!');
     
@@ -313,7 +314,12 @@ function initializeTabs() {
             switchTab(targetTab, tabButtons, tabContents);
         });
     });
+
+    // Theme tab: ensure correct tab is shown on load if needed
+    // (optional: can be omitted if not needed)
 }
+
+// ...existing code...
 
 function switchTab(targetTab, tabButtons, tabContents) {
     // Remove active class from all buttons and contents
@@ -336,6 +342,18 @@ function switchTab(targetTab, tabButtons, tabContents) {
             activeContent.style.transition = 'all 0.3s ease';
             activeContent.style.opacity = '1';
             activeContent.style.transform = 'translateY(0)';
+        }, 50);
+    }
+    
+    // Add: scroll to top of form on tab switch for better UX
+    if (activeContent) {
+        // ...existing code...
+        setTimeout(() => {
+            // ...existing code...
+            // Scroll to top of form container if present
+            if (activeContent.closest('.form-container')) {
+                activeContent.closest('.form-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }, 50);
     }
 }
@@ -1350,3 +1368,99 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Theme switching functionality
+function initializeThemeSettings() {
+    const themeSelect = document.getElementById('theme-select');
+    if (!themeSelect) return;
+
+    // Load saved theme or default
+    const savedTheme = localStorage.getItem('tsbc-theme') || 'default';
+    setTheme(savedTheme);
+    themeSelect.value = savedTheme;
+
+    themeSelect.addEventListener('change', function() {
+        setTheme(this.value);
+        localStorage.setItem('tsbc-theme', this.value);
+    });
+}
+
+function setTheme(theme) {
+    const root = document.documentElement;
+    // Remove all theme classes
+    root.classList.remove('theme-dark', 'theme-sunset');
+    switch (theme) {
+        case 'dark':
+            root.classList.add('theme-dark');
+            break;
+        case 'sunset':
+            root.classList.add('theme-sunset');
+            break;
+        default:
+            // Default: no extra class
+            break;
+    }
+}
+
+// Add theme CSS variables to <head> if not present
+(function injectThemeStyles() {
+    if (document.getElementById('tsbc-theme-styles')) return;
+    const style = document.createElement('style');
+    style.id = 'tsbc-theme-styles';
+    style.textContent = `
+    /* Default theme: no override, uses base variables */
+
+    /* Dark Theme */
+    .theme-dark {
+        --bg-card: #23272f;
+        --bg-card-hover: #2c313a;
+        --bg-secondary: #181b20;
+        --bg-glass: rgba(30,34,40,0.7);
+        --text-primary: #fff;
+        --text-secondary: #e0e0e0;
+        --text-muted: #b0b0b0;
+        --primary-color: #4f8cff;
+        --secondary-color: #a770ef;
+        --border-primary: #3a3f47;
+        --border-secondary: #23272f;
+        --danger-color: #ef4444;
+        --success-color: #22c55e;
+        --warning-color: #f59e42;
+        --shadow-glow: 0 0 16px #4f8cff44;
+        --shadow-xl: 0 4px 32px #000a;
+    }
+    .theme-dark .section-card,
+    .theme-dark .output-card,
+    .theme-dark .templates-panel,
+    .theme-dark .history-panel {
+        box-shadow: none;
+    }
+
+    /* Sunset Dusk Theme */
+    .theme-sunset {
+        --bg-card: #fff7f0;
+        --bg-card-hover: #ffe0c7;
+        --bg-secondary: #ffe6d5;
+        --bg-glass: rgba(255, 183, 94, 0.15);
+        --text-primary: #3b1f0b;
+        --text-secondary: #7a3e1d;
+        --text-muted: #b97c4b;
+        --primary-color: #ff7e5f;
+        --secondary-color: #feb47b;
+        --border-primary: #ffb97b;
+        --border-secondary: #ffd6b0;
+        --danger-color: #e85d04;
+        --success-color: #43aa8b;
+        --warning-color: #f9c74f;
+        --shadow-glow: 0 0 16px #ff7e5f44;
+        --shadow-xl: 0 4px 32px #ffb47b44;
+    }
+    .theme-sunset .section-card,
+    .theme-sunset .output-card,
+    .theme-sunset .templates-panel,
+    .theme-sunset .history-panel {
+        box-shadow: none;
+    }
+    `;
+    document.head.appendChild(style);
+})();
