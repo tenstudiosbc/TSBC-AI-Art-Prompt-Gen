@@ -37,7 +37,7 @@ const optionsData = {
         "Long wavy hair", "Short spiky hair", "Medium-length layered hair", "Braided hair", "Pixie cut", "Tied ponytail", "Twin tails", "Messy bun",
         "Bob cut", "Undercut", "Loose Ponytail", "Short Hair", "Side-swept bangs", "Afro", "Mohawk", "Straight long hair", "Shaggy hair", "Half-up bun",
         "Curly bob", "Asymmetrical cut", "Side braid", "Fishtail braid", "Dreadlocks", "Space buns", "Wind-swept hair", "Wolf cut", "Fluffy perm",
-        "Pompadour", "Elegant updo", "Elegant Ponytail"
+        "Pompadour", "Elegant updo", "Elegant Ponytail", "Long straight hair", "Short curly hair", "Long braided hair", "Long ponytail", "Long twin tails",
     ],
 
     hairColor: [
