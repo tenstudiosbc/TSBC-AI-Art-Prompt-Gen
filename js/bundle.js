@@ -38,13 +38,14 @@ const optionsData = {
         "Bob cut", "Undercut", "Loose Ponytail", "Short Hair", "Side-swept bangs", "Afro", "Mohawk", "Straight long hair", "Shaggy hair", "Half-up bun",
         "Curly bob", "Asymmetrical cut", "Side braid", "Fishtail braid", "Dreadlocks", "Space buns", "Wind-swept hair", "Wolf cut", "Fluffy perm",
         "Pompadour", "Elegant updo", "Elegant Ponytail", "Long straight hair", "Short curly hair", "Long braided hair", "Long ponytail", "Long twin tails",
+        "Long Single Ponytail", "Long Elegant Single Ponytail", "Short Afro"
     ],
 
     hairColor: [
         "",
         "Black", "Brown", "Blonde", "Red", "Blue", "Green", "Pink", "Purple", "Silver", "White", "Lavender", "Auburn", "Orange", "Turquoise",
         "Rose gold", "Mint green", "Pastel pink", "Pastel purple", "Peach", "Grey", "Charcoal", "Multicolor", "Rainbow", "Neon green", "Ice blue",
-        "Dark teal", "Platinum blonde", "Jet black", "Holographic", "Brunette", "Green-Tea", "Rosy"
+        "Dark teal", "Platinum blonde", "Jet black", "Holographic", "Brunette", "Green-Tea", "Rosy", "Lavender", "Black", "Dual Tone"
     ],
 
     eyeColor: [
@@ -58,7 +59,7 @@ const optionsData = {
         "",
         "Slim", "Athletic", "Muscular", "Petite", "Curvy", "Average", "Tall", "Short", "Toned", "Plus-size", "Chubby", "Lean", "Stocky", "Hourglass",
         "Pear-shaped", "Apple-shaped", "Broad-shouldered", "Lanky", "Thin", "Voluptuous", "Compact", "Delicate", "Robust", "Graceful", "Sturdy",
-        "Slender", "Thickset", "Dancer's build", "Fantasy warrior physique", "Model's Build"
+        "Slender", "Thickset", "Dancer's build", "Fantasy warrior physique", "Model's Build", "Very Skinny"
     ],
 
     mood: [
