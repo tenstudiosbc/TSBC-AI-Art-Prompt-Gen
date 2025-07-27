@@ -100,14 +100,14 @@ const optionsData = {
         "Casual t-shirt", "Elegant dress", "Business suit", "Hoodie", "Kimono", "Leather jacket", "School uniform", "Cyberpunk outfit", "Streetwear",
         "Tactical uniform", "Fantasy armor", "Sportswear", "Military uniform", "Ballgown", "Cloak and tunic", "Gothic lolita dress", "Trench coat",
         "Tank top and jeans", "Overalls", "Traditional hanbok", "Lab coat", "Bikini/swimsuit", "Battle robe", "Wedding dress", "Sailor uniform",
-        "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "Designer Dress"
+        "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "Designer Dress", "Qipao"
     ],
 
     clothingColor: [
         "",
         "Black", "White", "Red", "Blue", "Green", "Purple", "Pink", "Navy blue", "Golden", "Silver", "Turquoise", "Lavender", "Brown", "Dark grey",
         "Light grey", "Beige", "Coral", "Maroon", "Pastel blue", "Pastel pink", "Olive green", "Orange", "Crimson", "Sky blue", "Teal", "Neon yellow",
-        "Ivory", "Emerald", "Midnight purple"
+        "Ivory", "Emerald", "Midnight purple", "Pastel green"
     ],
 
     faceAccessories: [
