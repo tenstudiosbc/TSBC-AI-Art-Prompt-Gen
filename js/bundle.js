@@ -38,35 +38,35 @@ const optionsData = {
         "Bob cut", "Undercut", "Loose Ponytail", "Short Hair", "Side-swept bangs", "Afro", "Mohawk", "Straight long hair", "Shaggy hair", "Half-up bun",
         "Curly bob", "Asymmetrical cut", "Side braid", "Fishtail braid", "Dreadlocks", "Space buns", "Wind-swept hair", "Wolf cut", "Fluffy perm",
         "Pompadour", "Elegant updo", "Elegant Ponytail", "Long straight hair", "Short curly hair", "Long braided hair", "Long ponytail", "Long twin tails",
-        "Long Single Ponytail", "Long Elegant Single Ponytail", "Short Afro"
+        "Long Single Ponytail", "Long Elegant Single Ponytail", "Short Afro",
     ],
 
     hairColor: [
         "",
         "Black", "Brown", "Blonde", "Red", "Blue", "Green", "Pink", "Purple", "Silver", "White", "Lavender", "Auburn", "Orange", "Turquoise",
         "Rose gold", "Mint green", "Pastel pink", "Pastel purple", "Peach", "Grey", "Charcoal", "Multicolor", "Rainbow", "Neon green", "Ice blue",
-        "Dark teal", "Platinum blonde", "Jet black", "Holographic", "Brunette", "Green-Tea", "Rosy", "Lavender", "Black", "Dual Tone"
+        "Dark teal", "Platinum blonde", "Jet black", "Holographic", "Brunette", "Green-Tea", "Rosy", "Lavender", "Black", "Dual Tone",
     ],
 
     eyeColor: [
         "",
         "Black", "Dark Brown", "Light Brown", "Hazel", "Green", "Blue", "Violet", "Silver", "Grey", "Heterochromia", "Amber", "Turquoise", "Pink",
         "Red", "White", "Glowing Blue", "Glowing Red", "Golden", "Ice Blue", "Crimson", "Dark Green", "Soft Lavender", "Sunset Orange", "Neon Yellow",
-        "Amethyst", "Sky Blue", "Milky white (blind)", "Cat eyes", "Reptilian slit"
+        "Amethyst", "Sky Blue", "Milky white (blind)", "Cat eyes", "Reptilian slit",
     ],
 
     bodyType: [
         "",
         "Slim", "Athletic", "Muscular", "Petite", "Curvy", "Average", "Tall", "Short", "Toned", "Plus-size", "Chubby", "Lean", "Stocky", "Hourglass",
         "Pear-shaped", "Apple-shaped", "Broad-shouldered", "Lanky", "Thin", "Voluptuous", "Compact", "Delicate", "Robust", "Graceful", "Sturdy",
-        "Slender", "Thickset", "Dancer's build", "Fantasy warrior physique", "Model's Build", "Very Skinny"
+        "Slender", "Thickset", "Dancer's build", "Fantasy warrior physique", "Model's Build", "Very Skinny",
     ],
 
     mood: [
         "",
         "Happy", "Melancholic", "Mysterious", "Confident", "Dreamy", "Fierce", "Serene", "Playful", "Determined", "Flirty", "Sad", "Seductive",
         "Angry", "Calm", "Bashful", "Joyful", "Stoic", "Grumpy", "Smug", "Cold-hearted", "Energetic", "Lonely", "Fearful", "Hopeful", "Proud",
-        "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy", "Goofy", "Yandere", "Remorseful", "Crying", "Satisfied", "Tsundere"
+        "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy", "Goofy", "Yandere", "Remorseful", "Crying", "Satisfied", "Tsundere",
     ],
 
     cameraAngle: [
@@ -74,7 +74,7 @@ const optionsData = {
         "Portrait shot", "Close-up", "Medium shot", "Full body", "Low angle", "High angle", "Side profile", "Three-quarter view", "Over the shoulder",
         "Top-down view", "Bottom-up view", "Dutch tilt", "Extreme close-up", "Worm's eye view", "Bird's eye view", "Front-on shot", "Back view",
         "Wide angle", "Tilted profile", "Tracking shot angle", "Zoomed-in on eyes", "Tilt-up angle", "Tilt-down angle", "Centered angle",
-        "Cinematic crop", "Bokeh focus close-up", "Face-focused frame", "Dynamic perspective", "Overhead diagonal", "Hero angle"
+        "Cinematic crop", "Bokeh focus close-up", "Face-focused frame", "Dynamic perspective", "Overhead diagonal", "Hero angle",
     ],
 
     lighting: [
@@ -83,7 +83,7 @@ const optionsData = {
         "Overcast natural light", "Soft bounce light", "Spotlight focus", "Harsh top light", "Side lighting", "Color splash lighting", "Twilight lighting",
         "Interior lamp glow", "Candlelit glow", "Underlight (horror)", "Bioluminescent glow", "Northern lights", "Disco lights", "UV blacklight",
         "Magic aura glow", "Stormy flash light", "City night reflections", "Dim fluorescent", "Fairy light sparkle", "Natural daylight filter",
-        "Strobe lighting", "Dream haze lighting", "Rain-soaked", "Soft Lighting", "Cinematic Lightning"
+        "Strobe lighting", "Dream haze lighting", "Rain-soaked", "Soft Lighting", "Cinematic Lightning",
     ],
 
     background: [
@@ -93,7 +93,7 @@ const optionsData = {
         "Parking lot", "Shop", "Boutique", "Graveyard", "Snowy mountain", "Train station", "Library interior", "Abandoned warehouse", "Moon surface",
         "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room", "Newsroom", "News Studio", "SSIA HQ",
         "Interrogation Room", "Apartment Living room", "bedroom", "kitchen", "Ruins", "Green Background", "Desert Oasis", "Festival Ground In The City Park",
-        "Cosmic", "Mountains", "Bamboo Forests"
+        "Cosmic", "Mountains", "Bamboo Forests",
     ],
 
     clothing: [
@@ -101,14 +101,14 @@ const optionsData = {
         "Casual t-shirt", "Elegant dress", "Business suit", "Hoodie", "Kimono", "Leather jacket", "School uniform", "Cyberpunk outfit", "Streetwear",
         "Tactical uniform", "Fantasy armor", "Sportswear", "Military uniform", "Ballgown", "Cloak and tunic", "Gothic lolita dress", "Trench coat",
         "Tank top and jeans", "Overalls", "Traditional hanbok", "Lab coat", "Bikini/swimsuit", "Battle robe", "Wedding dress", "Sailor uniform",
-        "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "Designer Dress", "Qipao", "Tunic", "Kitten Costume", "Winter Jacket"
+        "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "Designer Dress", "Qipao", "Tunic", "Kitten Costume", "Winter Jacket",
     ],
 
     clothingColor: [
         "",
         "Black", "White", "Red", "Blue", "Green", "Purple", "Pink", "Navy blue", "Golden", "Silver", "Turquoise", "Lavender", "Brown", "Dark grey",
         "Light grey", "Beige", "Coral", "Maroon", "Pastel blue", "Pastel pink", "Olive green", "Orange", "Crimson", "Sky blue", "Teal", "Neon yellow",
-        "Ivory", "Emerald", "Midnight purple", "Pastel green"
+        "Ivory", "Emerald", "Midnight purple", "Pastel green",
     ],
 
     faceAccessories: [
@@ -117,7 +117,7 @@ const optionsData = {
         "Transparent mask", "VR goggles", "High-tech scouter", "Face tattoo", "Decorative gems", "Tribal face paint", "Makeup tear streak",
         "Steampunk goggles", "Breathing apparatus", "AR glasses", "Crystal eyepiece", "Glowing contact lens", "Golden mask", "Half-face mask",
         "Futuristic faceplate", "Face barcode", "Ear-to-ear headset", "Dragon mark", "Forehead gem", "Visor with UI", "Ear Comms", "Face shield",
-        "Fake beard", "Markings On Forehead"
+        "Fake beard", "Markings On Forehead",
     ],
 
     pose: [
@@ -143,7 +143,7 @@ const optionsData = {
         "Reloading", "Gun pointed at viewer", "Shooting mid-jump", "Gun at hip", "Sniper aim pose", "Kneeling with rifle", "Holding gun behind back",
         "Crossed arms with guns", "Gun in both hands forward", "Firing sideways", "Hiding gun", "Gun held to chest", "Silenced gun pose",
         "Assassin-style draw", "Underarm aim", "Tactical lean pose", "Quick draw pose", "Gun pointed downward", "Futuristic gun stance",
-        "Backflip shoot", "Empty gun expression", "Spinning gun trick"
+        "Backflip shoot", "Empty gun expression", "Spinning gun trick",
     ],
 
     effects: [
@@ -151,7 +151,7 @@ const optionsData = {
         "Soft blur", "Particle effects", "Depth of field", "Film grain", "Glitch effects", "Ethereal glow", "Smoke trails", "Magic aura", "Rain droplets",
         "Fire sparks", "Ice shards", "Electric sparks", "Floating leaves", "Cherry blossom petals", "Snowfall", "Motion blur", "Blood splatter",
         "Lens flare", "Dust particles", "Time distortion", "Wind swirl", "Fireflies", "Shadow tendrils", "Hologram distortion", "Shattered glass effect",
-        "Aura rings", "Light beams", "Energy ripple", "Neon outline", "Kaleidoscope", "Hazy Effects", "In Love"
+        "Aura rings", "Light beams", "Energy ripple", "Neon outline", "Kaleidoscope", "Hazy Effects", "In Love",
     ]
 };
 
