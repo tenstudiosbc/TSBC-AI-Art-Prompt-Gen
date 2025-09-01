@@ -66,7 +66,7 @@ const optionsData = {
         "",
         "Happy", "Melancholic", "Mysterious", "Confident", "Dreamy", "Fierce", "Serene", "Playful", "Determined", "Flirty", "Sad", "Seductive",
         "Angry", "Calm", "Bashful", "Joyful", "Stoic", "Grumpy", "Smug", "Cold-hearted", "Energetic", "Lonely", "Fearful", "Hopeful", "Proud",
-        "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy", "Goofy", "Yandere", "Remorseful", "Crying", "Satisfied"
+        "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy", "Goofy", "Yandere", "Remorseful", "Crying", "Satisfied", "Tsundere"
     ],
 
     cameraAngle: [
@@ -83,7 +83,7 @@ const optionsData = {
         "Overcast natural light", "Soft bounce light", "Spotlight focus", "Harsh top light", "Side lighting", "Color splash lighting", "Twilight lighting",
         "Interior lamp glow", "Candlelit glow", "Underlight (horror)", "Bioluminescent glow", "Northern lights", "Disco lights", "UV blacklight",
         "Magic aura glow", "Stormy flash light", "City night reflections", "Dim fluorescent", "Fairy light sparkle", "Natural daylight filter",
-        "Strobe lighting", "Dream haze lighting", "Rain-soaked"
+        "Strobe lighting", "Dream haze lighting", "Rain-soaked", "Soft Lighting", "Cinematic Lightning"
     ],
 
     background: [
@@ -92,7 +92,8 @@ const optionsData = {
         "Urban rooftop", "Enchanted garden", "Beachside house", "Downtown streets", "Classroom", "Medieval town", "Castle ballroom", "Boat",
         "Parking lot", "Shop", "Boutique", "Graveyard", "Snowy mountain", "Train station", "Library interior", "Abandoned warehouse", "Moon surface",
         "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room", "Newsroom", "News Studio", "SSIA HQ",
-        "Interrogation Room", "Apartment Living room", "bedroom", "kitchen", "Ruins", "Green Background"
+        "Interrogation Room", "Apartment Living room", "bedroom", "kitchen", "Ruins", "Green Background", "Desert Oasis", "Festival Ground In The City Park",
+        "Cosmic", "Mountains", "Bamboo Forests"
     ],
 
     clothing: [
@@ -100,7 +101,7 @@ const optionsData = {
         "Casual t-shirt", "Elegant dress", "Business suit", "Hoodie", "Kimono", "Leather jacket", "School uniform", "Cyberpunk outfit", "Streetwear",
         "Tactical uniform", "Fantasy armor", "Sportswear", "Military uniform", "Ballgown", "Cloak and tunic", "Gothic lolita dress", "Trench coat",
         "Tank top and jeans", "Overalls", "Traditional hanbok", "Lab coat", "Bikini/swimsuit", "Battle robe", "Wedding dress", "Sailor uniform",
-        "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "Designer Dress", "Qipao"
+        "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "Designer Dress", "Qipao", "Tunic", "Kitten Costume", "Winter Jacket"
     ],
 
     clothingColor: [
@@ -116,7 +117,7 @@ const optionsData = {
         "Transparent mask", "VR goggles", "High-tech scouter", "Face tattoo", "Decorative gems", "Tribal face paint", "Makeup tear streak",
         "Steampunk goggles", "Breathing apparatus", "AR glasses", "Crystal eyepiece", "Glowing contact lens", "Golden mask", "Half-face mask",
         "Futuristic faceplate", "Face barcode", "Ear-to-ear headset", "Dragon mark", "Forehead gem", "Visor with UI", "Ear Comms", "Face shield",
-        "Fake beard"
+        "Fake beard", "Markings On Forehead"
     ],
 
     pose: [
@@ -150,7 +151,7 @@ const optionsData = {
         "Soft blur", "Particle effects", "Depth of field", "Film grain", "Glitch effects", "Ethereal glow", "Smoke trails", "Magic aura", "Rain droplets",
         "Fire sparks", "Ice shards", "Electric sparks", "Floating leaves", "Cherry blossom petals", "Snowfall", "Motion blur", "Blood splatter",
         "Lens flare", "Dust particles", "Time distortion", "Wind swirl", "Fireflies", "Shadow tendrils", "Hologram distortion", "Shattered glass effect",
-        "Aura rings", "Light beams", "Energy ripple", "Neon outline", "Kaleidoscope", "Hazy Effects"
+        "Aura rings", "Light beams", "Energy ripple", "Neon outline", "Kaleidoscope", "Hazy Effects", "In Love"
     ]
 };
 
