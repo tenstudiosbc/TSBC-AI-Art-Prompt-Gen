@@ -78,14 +78,20 @@
 /* Content Wrapper */
 .content-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
     gap: var(--spacing-2xl);
     align-items: start;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
 /* Form Container */
 .form-container {
     position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Tab Content */
@@ -112,6 +118,9 @@
     margin-bottom: var(--spacing-lg);
     backdrop-filter: blur(20px);
     transition: all var(--transition-normal);
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .section-card:hover {
@@ -138,12 +147,9 @@
 /* Form Grid */
 .form-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: var(--spacing-lg);
-}
-
-.form-group.full-width {
-    grid-column: 1 / -1;
+    width: 100%;
 }
 
 /* Generation Controls */
@@ -167,6 +173,8 @@
 .output-container {
     position: sticky;
     top: var(--spacing-xl);
+    width: 100%;
+    height: fit-content;
 }
 
 .output-card {
@@ -349,6 +357,24 @@
 /* All backgrounds, borders, and text colors use CSS variables for theme switching */
 
 /* Responsive Design */
+@media (max-width: 1400px) {
+    .content-wrapper {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        gap: var(--spacing-xl);
+    }
+}
+
+@media (max-width: 1200px) {
+    .content-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .form-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
 @media (max-width: 1024px) {
     .content-wrapper {
         grid-template-columns: 1fr;

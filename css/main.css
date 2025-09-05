@@ -5,3 +5,17 @@
 @import url('button.css');
 @import url('layout.css');
 @import url('responsive.css');
+
+/* Add wrapper styles for better content containment */
+.app-wrapper {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .app-wrapper {
+        padding: 0 var(--spacing-sm);
+    }
+}
