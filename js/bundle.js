@@ -67,6 +67,7 @@ const optionsData = {
         "Happy", "Melancholic", "Mysterious", "Confident", "Dreamy", "Fierce", "Serene", "Playful", "Determined", "Flirty", "Sad", "Seductive",
         "Angry", "Calm", "Bashful", "Joyful", "Stoic", "Grumpy", "Smug", "Cold-hearted", "Energetic", "Lonely", "Fearful", "Hopeful", "Proud",
         "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy", "Goofy", "Yandere", "Remorseful", "Crying", "Satisfied", "Tsundere",
+        "Sensual", "Crazy", "Turned On",
     ],
 
     cameraAngle: [
@@ -93,7 +94,8 @@ const optionsData = {
         "Parking lot", "Shop", "Boutique", "Graveyard", "Snowy mountain", "Train station", "Library interior", "Abandoned warehouse", "Moon surface",
         "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room", "Newsroom", "News Studio", "SSIA HQ",
         "Interrogation Room", "Apartment Living room", "bedroom", "kitchen", "Ruins", "Green Background", "Desert Oasis", "Festival Ground In The City Park",
-        "Cosmic", "Mountains", "Bamboo Forests",
+        "Cosmic", "Mountains", "Bamboo Forests", "Desert Temples", "Inside Ogosho", "Outside Ogosho", "Club", "Inside The Car", "Secluded Beach",
+        "Luxurious Bed", "Field with Tall Grass", "Field Filled with Red Roses",
     ],
 
     clothing: [
@@ -102,13 +104,14 @@ const optionsData = {
         "Tactical uniform", "Fantasy armor", "Sportswear", "Military uniform", "Ballgown", "Cloak and tunic", "Gothic lolita dress", "Trench coat",
         "Tank top and jeans", "Overalls", "Traditional hanbok", "Lab coat", "Bikini/swimsuit", "Battle robe", "Wedding dress", "Sailor uniform",
         "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "Designer Dress", "Qipao", "Tunic", "Kitten Costume", "Winter Jacket",
+        "Lingerie", "Casual Outfits", "Grunge Outfits", "Sportswear",
     ],
 
     clothingColor: [
         "",
         "Black", "White", "Red", "Blue", "Green", "Purple", "Pink", "Navy blue", "Golden", "Silver", "Turquoise", "Lavender", "Brown", "Dark grey",
         "Light grey", "Beige", "Coral", "Maroon", "Pastel blue", "Pastel pink", "Olive green", "Orange", "Crimson", "Sky blue", "Teal", "Neon yellow",
-        "Ivory", "Emerald", "Midnight purple", "Pastel green",
+        "Ivory", "Emerald", "Midnight purple", "Pastel green", "Dark Red", "Red Apple", "Green Apple", "Golden Sun", "Exotic Blue", "Youthful Pink",
     ],
 
     faceAccessories: [
@@ -126,6 +129,9 @@ const optionsData = {
         "With gun", "Kneeling", "Leaning on wall", "Running", "Jumping", "Lying down", "Peace sign", "Holding object", "Hands in pockets",
         "Casting spell", "Floating", "Back turned", "Kicking", "Stretching", "Singing", "Holding hands out", "Protective stance", "Hugging something",
         "Martial arts stance", "Crouching", "Pointing", "Eating", "Sleeping", "Sitting cross-legged", "Reaching out", "Holding chin thoughtfully",
+        "Driving", "Holding a Phone", "Taking a Selfie", "Sitting Like a Kitten", "Drinking", "Swipe a Sweat", "Hands In Hair", "Perching In The Edge",
+        "Gentle Arch", "The Fabric Drape", "On The Stomach", "Draped Over Furniture", "Mirror Reflection", "Pole-Dancing", "Empty Gaze",
+        "Thinking Hard",
     ],
 
     hairAccessory: [
