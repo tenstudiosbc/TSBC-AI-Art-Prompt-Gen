@@ -16,7 +16,7 @@ function toggleHairAccessory() {
     const gender = document.getElementById("gender").value;
     const hairAccessoryContainer = document.getElementById("hair-accessory-container");
     
-    if (gender === "Woman" || gender === "Feminine-presenting" || gender === "Immortal Youthful") {
+    if (gender === "Woman" || gender === "Feminine-presenting" || gender === "Immortal youthful") {
         hairAccessoryContainer.classList.add("show");
     } else {
         hairAccessoryContainer.classList.remove("show");
