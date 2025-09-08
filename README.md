@@ -25,3 +25,6 @@ We appreciate the amazing contributions from our community!
 - [@tenstudiosbc](https://github.com/tenstudiosbc) – Project Owner & Maintainer
 - [@Azixe](https://github.com/Azixe) – Feature Development
 - [@Vynn0](https://github.com/Vynn0) – Bug Fixes & Optimization
+
+## Desktop Issue Notes:
+We are Acknowledges About Desktop Issue that the sites didn't work, we are still fixing the issue and finding the root of the cause, use your mobile phone to use the generator instead
