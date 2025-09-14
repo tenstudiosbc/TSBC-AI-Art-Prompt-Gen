@@ -104,7 +104,8 @@ const optionsData = {
         "Tactical uniform", "Fantasy armor", "Sportswear", "Military uniform", "Ballgown", "Cloak and tunic", "Gothic lolita dress", "Trench coat",
         "Tank top and jeans", "Overalls", "Traditional hanbok", "Lab coat", "Bikini/swimsuit", "Battle robe", "Wedding dress", "Sailor uniform",
         "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "Designer Dress", "Qipao", "Tunic", "Kitten Costume", "Winter Jacket",
-        "Lingerie", "Casual Outfits", "Grunge Outfits", "Sportswear",
+        "Lingerie", "Casual Outfits", "Grunge Outfits", "Sportswear", "Angel Costume", "Off Shoulder Dress", "Keyhole Dress", "Nurse Outfits",
+        "Sexy Nurse Costume", "Nurse Costume", "Halter Top", "Turtle Neck with Jeans", "Turtle Neck with vest", "Short Dress",
     ],
 
     clothingColor: [
@@ -131,7 +132,7 @@ const optionsData = {
         "Martial arts stance", "Crouching", "Pointing", "Eating", "Sleeping", "Sitting cross-legged", "Reaching out", "Holding chin thoughtfully",
         "Driving", "Holding a Phone", "Taking a Selfie", "Sitting Like a Kitten", "Drinking", "Swipe a Sweat", "Hands In Hair", "Perching In The Edge",
         "Gentle Arch", "The Fabric Drape", "On The Stomach", "Draped Over Furniture", "Mirror Reflection", "Pole-Dancing", "Empty Gaze",
-        "Thinking Hard",
+        "Thinking Hard", "Painting In Canvas", "Leaning Against Mirror", "Gasped",
     ],
 
     hairAccessory: [
