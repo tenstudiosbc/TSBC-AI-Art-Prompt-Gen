@@ -52,7 +52,7 @@ const optionsData = {
         "",
         "Black", "Dark Brown", "Light Brown", "Hazel", "Green", "Blue", "Violet", "Silver", "Grey", "Heterochromia", "Amber", "Turquoise", "Pink",
         "Red", "White", "Glowing Blue", "Glowing Red", "Golden", "Ice Blue", "Crimson", "Dark Green", "Soft Lavender", "Sunset Orange", "Neon Yellow",
-        "Amethyst", "Sky Blue", "Milky white (blind)", "Cat eyes", "Reptilian slit",
+        "Amethyst", "Sky Blue", "Milky white (blind)", "Cat eyes", "Reptilian slit", "Glowing Brown", "Black"
     ],
 
     bodyType: [
@@ -105,7 +105,9 @@ const optionsData = {
         "Tank top and jeans", "Overalls", "Traditional hanbok", "Lab coat", "Bikini/swimsuit", "Battle robe", "Wedding dress", "Sailor uniform",
         "Mage cloak", "Futuristic pilot suit", "Pajamas", "Detective coat", "Designer Dress", "Qipao", "Tunic", "Kitten Costume", "Winter Jacket",
         "Lingerie", "Casual Outfits", "Grunge Outfits", "Sportswear", "Angel Costume", "Off Shoulder Dress", "Keyhole Dress", "Nurse Outfits",
-        "Sexy Nurse Costume", "Nurse Costume", "Halter Top", "Turtle Neck with Jeans", "Turtle Neck with vest", "Short Dress",
+        "Sexy Nurse Costume", "Nurse Costume", "Halter Top", "Turtle Neck with Jeans", "Turtle Neck with vest", "Short Dress", "Oranate Dress",
+        "Luxurious Battle Dress", "Halter Battle Dress", "Fantasy Battle Kimono", "Turtleneck Oranate Dress", "Wild West Outfits", "Priestess Outfits",
+        "Soldier Uniform", "Long Robe",
     ],
 
     clothingColor: [
@@ -141,7 +143,8 @@ const optionsData = {
         "Butterfly clip", "Gemstone pin", "Feather decoration", "Star clip", "Mini top hat", "Scrunchie", "Pearl string", "Golden barrette",
         "Spiked accessory", "Braided beads", "Traditional pin", "Leaf crown", "Moon ornament", "Dragon pin", "Music note clip", "Candy-shaped clip",
         "Spiderweb clip", "Rainbow hair clip", "Skull hairpin", "Little SSIA Insignia", "Mage Hat", "Flower crown", "Hairband with bells",
-        "Hairband with charms", "Hairband with feathers", "Hairband with pearls", "Insignia hairpin", "Hairband with gems", "Hairband with ribbons"
+        "Hairband with charms", "Hairband with feathers", "Hairband with pearls", "Insignia hairpin", "Hairband with gems", "Hairband with ribbons",
+        "Flower Clip", "Electro Clip",
     ],
 
     gunPose: [
