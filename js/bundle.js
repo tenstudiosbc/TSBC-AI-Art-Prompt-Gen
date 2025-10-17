@@ -25,6 +25,7 @@ const optionsData = {
         "Transgender woman", "Transgender man", "Cross-dressed", "Drag queen", "Drag king", "Alien gender", "AI-presenting", "Shape-shifting gender",
         "Magical girl form", "Masquerading gender", "Dual-gendered", "Ambiguous gender", "Fae gender", "Cursed form", "Reincarnated gender",
         "Cybernetic androgyny", "Princess-knight fusion", "Witch form", "Goddess form", "Female Kitsune", "Male Kitsune", "Female Synthetic AI",
+        "Female Foxian", "Male Foxian",
     ],
 
     personality: [
