@@ -37,15 +37,16 @@ const optionsData = {
         "Long wavy hair", "Short spiky hair", "Medium-length layered hair", "Braided hair", "Pixie cut", "Tied ponytail", "Twin tails", "Messy bun",
         "Bob cut", "Undercut", "Loose Ponytail", "Short Hair", "Side-swept bangs", "Afro", "Mohawk", "Straight long hair", "Shaggy hair", "Half-up bun",
         "Curly bob", "Asymmetrical cut", "Side braid", "Fishtail braid", "Dreadlocks", "Space buns", "Wind-swept hair", "Wolf cut", "Fluffy perm",
-        "Pompadour", "Elegant updo", "Elegant Ponytail", "Long straight hair", "Short curly hair", "Long braided hair", "Long ponytail", "Long twin tails",
-        "Long Single Ponytail", "Long Elegant Single Ponytail", "Short Afro",
+        "Pompadour", "Elegant updo Hair", "Elegant Ponytail Hair", "Long straight hair", "Short curly hair", "Long braided hair", "Long ponytail", "Long twin tails",
+        "Long Single Ponytail", "Long Elegant Single Ponytail", "Short Afro", "Long Loose Ponytail Hair",
     ],
 
     hairColor: [
         "",
         "Black", "Brown", "Blonde", "Red", "Blue", "Green", "Pink", "Purple", "Silver", "White", "Lavender", "Auburn", "Orange", "Turquoise",
         "Rose gold", "Mint green", "Pastel pink", "Pastel purple", "Peach", "Grey", "Charcoal", "Multicolor", "Rainbow", "Neon green", "Ice blue",
-        "Dark teal", "Platinum blonde", "Jet black", "Holographic", "Brunette", "Green-Tea", "Rosy", "Lavender", "Black", "Dual Tone",
+        "Dark teal", "Platinum blonde", "Jet black", "Holographic", "Brunette", "Green-Tea", "Rosy", "Lavender", "Black", "Dual Tone", "Dark Blue",
+        "Gold",
     ],
 
     eyeColor: [
@@ -107,7 +108,7 @@ const optionsData = {
         "Lingerie", "Casual Outfits", "Grunge Outfits", "Sportswear", "Angel Costume", "Off Shoulder Dress", "Keyhole Dress", "Nurse Outfits",
         "Sexy Nurse Costume", "Nurse Costume", "Halter Top", "Turtle Neck with Jeans", "Turtle Neck with vest", "Short Dress", "Oranate Dress",
         "Luxurious Battle Dress", "Halter Battle Dress", "Fantasy Battle Kimono", "Turtleneck Oranate Dress", "Wild West Outfits", "Priestess Outfits",
-        "Soldier Uniform", "Long Robe",
+        "Soldier Uniform", "Long Robe", "Formal Suits", "Blouse",
     ],
 
     clothingColor: [
