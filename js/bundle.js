@@ -5,7 +5,7 @@
 const optionsData = {
     artStyle: [
         "",
-        "Painterly anime", "Semi-realistic anime", "Cyberpunk anime style", "Studio Ghibli-inspired", "Cel-shaded", "3D", "Photorealistic",
+        "Painterly anime", "2D Painterly anime", "Semi-realistic anime", "Cyberpunk anime style", "Studio Ghibli-inspired", "Cel-shaded", "3D", "Photorealistic",
         "Watercolor sketch", "Vintage manga", "Noir comic style", "Western cartoon", "Flat vector", "Ink and brush", "Lo-fi art style", "Pop art",
         "Pixel art", "Realistic oil painting", "High-contrast chiaroscuro", "Graffiti street art", "Steampunk fantasy", "Minimalist line art",
         "Classic shoujo anime", "Classic shounen anime", "Brush pen illustration", "Dark fantasy manga", "Visual novel style", "Retro 80s anime",
