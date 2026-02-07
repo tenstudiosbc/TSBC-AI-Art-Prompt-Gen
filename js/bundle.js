@@ -39,7 +39,7 @@ const optionsData = {
         "Bob cut", "Undercut", "Loose Ponytail", "Short Hair", "Side-swept bangs", "Afro", "Mohawk", "Straight long hair", "Shaggy hair", "Half-up bun",
         "Curly bob", "Asymmetrical cut", "Side braid", "Fishtail braid", "Dreadlocks", "Space buns", "Wind-swept hair", "Wolf cut", "Fluffy perm",
         "Pompadour", "Elegant updo Hair", "Elegant Ponytail Hair", "Long straight hair", "Short curly hair", "Long braided hair", "Long ponytail", "Long twin tails",
-        "Long Single Ponytail", "Long Elegant Single Ponytail", "Short Afro", "Long Loose Ponytail Hair",
+        "Long Single Ponytail", "Long Elegant Single Ponytail", "Short Afro", "Long Loose Ponytail Hair", "Elegant Updo Buns", "Regal Long Hair",
     ],
 
     hairColor: [
@@ -47,21 +47,21 @@ const optionsData = {
         "Black", "Brown", "Blonde", "Red", "Blue", "Green", "Pink", "Purple", "Silver", "White", "Lavender", "Auburn", "Orange", "Turquoise",
         "Rose gold", "Mint green", "Pastel pink", "Pastel purple", "Peach", "Grey", "Charcoal", "Multicolor", "Rainbow", "Neon green", "Ice blue",
         "Dark teal", "Platinum blonde", "Jet black", "Holographic", "Brunette", "Green-Tea", "Rosy", "Lavender", "Black", "Dual Tone", "Dark Blue",
-        "Gold",
+        "Gold", "Dark Purle", "Dark Red",
     ],
 
     eyeColor: [
         "",
         "Black", "Dark Brown", "Light Brown", "Hazel", "Green", "Blue", "Violet", "Silver", "Grey", "Heterochromia", "Amber", "Turquoise", "Pink",
         "Red", "White", "Glowing Blue", "Glowing Red", "Golden", "Ice Blue", "Crimson", "Dark Green", "Soft Lavender", "Sunset Orange", "Neon Yellow",
-        "Amethyst", "Sky Blue", "Milky white (blind)", "Cat eyes", "Reptilian slit", "Glowing Brown", "Black"
+        "Amethyst", "Sky Blue", "Milky white (blind)", "Cat eyes", "Reptilian slit", "Glowing Brown", "Black", "Purple",
     ],
 
     bodyType: [
         "",
         "Slim", "Athletic", "Muscular", "Petite", "Curvy", "Average", "Tall", "Short", "Toned", "Plus-size", "Chubby", "Lean", "Stocky", "Hourglass",
         "Pear-shaped", "Apple-shaped", "Broad-shouldered", "Lanky", "Thin", "Voluptuous", "Compact", "Delicate", "Robust", "Graceful", "Sturdy",
-        "Slender", "Thickset", "Dancer's build", "Fantasy warrior physique", "Model's Build", "Very Skinny",
+        "Slender", "Thickset", "Dancer's build", "Fantasy warrior physique", "Model's Build", "Very Skinny", "Beautiful"
     ],
 
     mood: [
@@ -69,7 +69,7 @@ const optionsData = {
         "Happy", "Melancholic", "Mysterious", "Confident", "Dreamy", "Fierce", "Serene", "Playful", "Determined", "Flirty", "Sad", "Seductive",
         "Angry", "Calm", "Bashful", "Joyful", "Stoic", "Grumpy", "Smug", "Cold-hearted", "Energetic", "Lonely", "Fearful", "Hopeful", "Proud",
         "Surprised", "Sassy", "Mischievous", "Tranquil", "Timid", "Shy", "Goofy", "Yandere", "Remorseful", "Crying", "Satisfied", "Tsundere",
-        "Sensual", "Crazy", "Turned On",
+        "Sensual", "Crazy", "Turned On", "Aroused",
     ],
 
     cameraAngle: [
@@ -97,7 +97,8 @@ const optionsData = {
         "Space station", "Jungle ruins", "Volcanic terrain", "Café", "Aquarium tunnel", "Royal throne room", "Newsroom", "News Studio", "SSIA HQ",
         "Interrogation Room", "Apartment Living room", "bedroom", "kitchen", "Ruins", "Green Background", "Desert Oasis", "Festival Ground In The City Park",
         "Cosmic", "Mountains", "Bamboo Forests", "Desert Temples", "Inside Ogosho", "Outside Ogosho", "Club", "Inside The Car", "Secluded Beach",
-        "Luxurious Bed", "Field with Tall Grass", "Field Filled with Red Roses",
+        "Luxurious Bed", "Field with Tall Grass", "Field Filled with Red Roses", "Random Location (Exterior)", "Random Location (Interior)",
+        "Pedestrian Crossing", "Inside a Train",
     ],
 
     clothing: [
@@ -109,7 +110,7 @@ const optionsData = {
         "Lingerie", "Casual Outfits", "Grunge Outfits", "Sportswear", "Angel Costume", "Off Shoulder Dress", "Keyhole Dress", "Nurse Outfits",
         "Sexy Nurse Costume", "Nurse Costume", "Halter Top", "Turtle Neck with Jeans", "Turtle Neck with vest", "Short Dress", "Oranate Dress",
         "Luxurious Battle Dress", "Halter Battle Dress", "Fantasy Battle Kimono", "Turtleneck Oranate Dress", "Wild West Outfits", "Priestess Outfits",
-        "Soldier Uniform", "Long Robe", "Formal Suits", "Blouse",
+        "Soldier Uniform", "Long Robe", "Formal Suits", "Blouse", "Lacy Bikini",
     ],
 
     clothingColor: [
@@ -136,7 +137,8 @@ const optionsData = {
         "Martial arts stance", "Crouching", "Pointing", "Eating", "Sleeping", "Sitting cross-legged", "Reaching out", "Holding chin thoughtfully",
         "Driving", "Holding a Phone", "Taking a Selfie", "Sitting Like a Kitten", "Drinking", "Swipe a Sweat", "Hands In Hair", "Perching In The Edge",
         "Gentle Arch", "The Fabric Drape", "On The Stomach", "Draped Over Furniture", "Mirror Reflection", "Pole-Dancing", "Empty Gaze",
-        "Thinking Hard", "Painting In Canvas", "Leaning Against Mirror", "Gasped",
+        "Thinking Hard", "Painting In Canvas", "Leaning Against Mirror", "Gasped", "Holding a Sword", "Holding a Camera", "Holding A Camera",
+        "Holding a Umbrela",
     ],
 
     hairAccessory: [
