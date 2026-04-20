@@ -16,7 +16,7 @@ const optionsData = {
         "",
         "Infant", "Toddler", "Young child", "Child", "Tween", "Early teen", "Teen", "Late teen", "Young adult", "20s", "Late 20s", "Early 30s",
         "30s", "Late 30s", "Adult", "Mid 40s", "Middle-aged", "Early 50s", "Late 50s", "Senior", "Elderly", "Ancient-looking", "Immortal youthful",
-        "Ageless appearance", "Preteen", "Old but agile", "Teen-looking android", "Mature warrior", "Youthful mage"
+        "Ageless appearance", "Preteen", "Old but agile", "Teen-looking android", "Mature warrior", "Youthful mage", 
     ],
 
     gender: [
@@ -25,7 +25,7 @@ const optionsData = {
         "Transgender woman", "Transgender man", "Cross-dressed", "Drag queen", "Drag king", "Alien gender", "AI-presenting", "Shape-shifting gender",
         "Magical girl form", "Masquerading gender", "Dual-gendered", "Ambiguous gender", "Fae gender", "Cursed form", "Reincarnated gender",
         "Cybernetic androgyny", "Princess-knight fusion", "Witch form", "Goddess form", "Female Kitsune", "Male Kitsune", "Female Synthetic AI",
-        "Female Foxian", "Male Foxian",
+        "Female Foxian", "Male Foxian", "Male Intellitron", "Female Intellitron",
     ],
 
     personality: [
