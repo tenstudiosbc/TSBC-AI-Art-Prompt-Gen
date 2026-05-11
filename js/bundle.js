@@ -98,7 +98,7 @@ const optionsData = {
         "Interrogation Room", "Apartment Living room", "bedroom", "kitchen", "Ruins", "Green Background", "Desert Oasis", "Festival Ground In The City Park",
         "Cosmic", "Mountains", "Bamboo Forests", "Desert Temples", "Inside Ogosho", "Outside Ogosho", "Club", "Inside The Car", "Secluded Beach",
         "Luxurious Bed", "Field with Tall Grass", "Field Filled with Red Roses", "Random Location (Exterior)", "Random Location (Interior)",
-        "Pedestrian Crossing", "Inside a Train",
+        "Pedestrian Crossing", "Inside a Train", "Powerplant", "Office",
     ],
 
     clothing: [
